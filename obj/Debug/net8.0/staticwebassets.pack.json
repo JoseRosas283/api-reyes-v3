@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.png",
+      "PackagePath": "staticwebassets\\uploads\\076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.png"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\322fc411-62f3-46b0-a43c-cca8b9976863.png",
+      "PackagePath": "staticwebassets\\uploads\\322fc411-62f3-46b0-a43c-cca8b9976863.png"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.png",
+      "PackagePath": "staticwebassets\\uploads\\3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.png"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.png",
+      "PackagePath": "staticwebassets\\uploads\\61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.png"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a3f1b236-8c49-4a46-990e-ebc8b20c24da.png",
+      "PackagePath": "staticwebassets\\uploads\\a3f1b236-8c49-4a46-990e-ebc8b20c24da.png"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a7c9b2b2-cdb0-4421-b529-95737a352add.png",
+      "PackagePath": "staticwebassets\\uploads\\a7c9b2b2-cdb0-4421-b529-95737a352add.png"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.png",
+      "PackagePath": "staticwebassets\\uploads\\a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.png"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\ce12d38e-0204-4f32-9e2e-7cb01481d9b5.png",
+      "PackagePath": "staticwebassets\\uploads\\ce12d38e-0204-4f32-9e2e-7cb01481d9b5.png"
+    },
+    {
+      "Id": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.png",
+      "PackagePath": "staticwebassets\\uploads\\fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ReyesAR.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ReyesAR.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ReyesAR.props",
+      "PackagePath": "build\\ReyesAR.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ReyesAR.props",
+      "PackagePath": "buildMultiTargeting\\ReyesAR.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ReyesAR.props",
+      "PackagePath": "buildTransitive\\ReyesAR.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

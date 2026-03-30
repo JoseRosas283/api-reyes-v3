@@ -1,0 +1,611 @@
+﻿using Microsoft.EntityFrameworkCore;
+using ReyesAR.Models;
+using System;
+
+namespace ReyesAR.BasedeDatos
+{
+    public class ReyesARContext : DbContext
+    {
+        public ReyesARContext(DbContextOptions<ReyesARContext> options) : base(options) { }
+        public virtual DbSet<UnidadMedidaEntity> UnidadMedidas { get; set; }
+        public virtual DbSet<UnidadCompraEntity> UnidadCompras { get; set; }
+        public virtual DbSet<UnidadVentaEntity> UnidadVentas { get; set; }
+        public virtual DbSet<DepartamentoEntity> Departamentos { get; set; }
+        public virtual DbSet<CategoriaEntity> Categorias { get; set; }
+        public virtual DbSet<ProveedorEntity> Proveedores { get; set; }
+        public virtual DbSet<ProductoEntity> Productos { get; set; }
+        public virtual DbSet<EmpleadoEntity> Empleados { get; set; }
+        public virtual DbSet<RolEntity> Roles { get; set; }
+        public virtual DbSet<EmpleadoRolEntity> EmpleadoRol { get; set; }
+        public virtual DbSet<UsuarioEntity> Usuarios { get; set; }
+        public virtual DbSet<EquivalenciaUnidadEntity> EquivalenciasUnidad { get; set; }
+        public virtual DbSet<EquivalenciaUnidadVentaEntity> EquivalenciasUnidadVentas { get; set; }
+        public virtual DbSet<PedidoEntity> Pedidos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<UnidadMedidaEntity>(entity =>
+            {
+                entity.ToTable("UnidadMedidas");
+                entity.HasKey(u => u.claveUnidad).HasName("PK_ClaveUnidad");
+
+                entity.Property(u => u.claveUnidad)
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_unidad()")
+                    .ValueGeneratedOnAdd();
+
+                // Mapeo de Enums de Postgres
+                // Usamos HasPostgresEnum o simplemente definimos el nombre del tipo en la base de datos
+                entity.Property(u => u.nombreUnidad)
+                    .HasColumnType("nombre_unidad_enum")
+                    .IsRequired();
+
+                entity.Property(u => u.abreviatura)
+                    .HasColumnType("abreviatura_unidad_enum")
+                    .IsRequired();
+
+                entity.Property(u => u.tipoStock)
+                    .HasColumnType("tipo_stock_enum")
+                    .IsRequired();
+
+                entity.Property(u => u.estado)
+                    .HasColumnType("boolean")
+                    .HasDefaultValue(true);
+
+                // Relación 1:N con Productos
+                entity.HasMany(u => u.Productos)
+                    .WithOne(p => p.UnidadMedida)
+                    .HasForeignKey(p => p.claveUnidadMedida);
+            });
+
+            modelBuilder.Entity<UnidadVentaEntity>(entity =>
+            {
+                entity.ToTable("UnidadVentas"); // Coincide con tu CREATE TABLE
+                entity.HasKey(u => u.claveUnidadVenta).HasName("PK_ClaveUnidadVenta");
+
+                entity.Property(u => u.claveUnidadVenta)
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_unidadVenta()")
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(u => u.nombreUnidad)
+                    .HasColumnType("nombre_unidad_venta_enum") // Enum específico de ventas
+                    .IsRequired();
+
+                entity.Property(u => u.abreviatura)
+                    .HasColumnType("abreviatura_unidad_venta_enum") // Enum específico de ventas
+                    .IsRequired();
+
+                entity.Property(u => u.tipoValor)
+                    .HasColumnType("tipo_valor_enum") // Enum general de valores
+                    .IsRequired();
+
+                entity.Property(u => u.estado)
+                    .HasColumnType("boolean")
+                    .HasDefaultValue(true);
+
+                // Relación 1:N con Productos
+                entity.HasMany(u => u.Productos)
+                    .WithOne(p => p.UnidadVenta) // Asumiendo que en ProductoEntity se llama UnidadVenta
+                    .HasForeignKey(p => p.claveUnidadVenta);
+            });
+
+
+            modelBuilder.Entity<UnidadCompraEntity>(entity =>
+            {
+                // 1. Nombre exacto de la tabla en tu script
+                entity.ToTable("UnidadCompras");
+                entity.HasKey(u => u.claveUnidadCompra).HasName("PK_ClaveunidadCompra");
+
+                // 2. Configuración de la Clave con función de Postgres
+                entity.Property(u => u.claveUnidadCompra)
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_unidadCompra()")
+                    .ValueGeneratedOnAdd(); // Importante para que EF no intente mandarlo nulo
+
+                // 3. Mapeo de ENUMS (Cambiamos varchar por el nombre del tipo en Postgres)
+                entity.Property(u => u.nombre_unidad)
+                    .HasColumnType("tipo_unidad_nuevo")
+                    .IsRequired();
+
+                entity.Property(u => u.abreviatura)
+                    .HasColumnType("abreviatura_unidad_nuevo")
+                    .IsRequired();
+
+                entity.Property(u => u.tipo_stock)
+                    .HasColumnType("tipo_valor_enum")
+                    .IsRequired();
+
+                entity.Property(u => u.estado)
+                    .HasColumnType("boolean")
+                    .HasDefaultValue(true);
+
+            });
+
+            modelBuilder.Entity<DepartamentoEntity>(entity =>
+            {
+                entity.ToTable("Departamentos");
+                entity.HasKey(d => d.claveDepartamento).HasName("PK_ClaveDepartamento");
+
+                entity.Property(d => d.claveDepartamento)
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_departamento()")
+                    .ValueGeneratedOnAdd();
+
+                entity.Property(d => d.nombre)
+                    .HasColumnType("varchar(100)")
+                    .IsRequired();
+
+                entity.Property(d => d.descripcion)
+                    .HasColumnType("varchar(255)")
+                    .IsRequired();
+
+                entity.Property(d => d.estado)
+                    .HasColumnType("boolean")
+                    .HasDefaultValue(true);
+
+                entity.Property(d => d.fecha_creacion)
+                    .HasColumnType("timestamp")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
+            });
+
+            modelBuilder.Entity<CategoriaEntity>(entity =>
+            {
+                entity.ToTable("Categorias"); // Respetando las mayúsculas de tu script
+                entity.HasKey(c => c.claveCategoria).HasName("PK_ClaveCategoria");
+
+                entity.Property(c => c.claveCategoria)
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_Categoria()") // Usamos tu función de Postgres
+                    .ValueGeneratedOnAdd(); // Le avisamos a EF que la DB genera este valor
+
+                entity.Property(c => c.nombre)
+                    .HasColumnType("varchar(100)")
+                    .IsRequired();
+
+                entity.Property(c => c.descripcion)
+                    .HasColumnType("varchar(255)")
+                    .IsRequired(); // Según tu script, es NOT NULL
+
+                entity.Property(c => c.estado)
+                 .HasColumnName("estado")
+                .HasColumnType("boolean")
+                   .IsRequired(); // ← nuevo campo para estado
+
+                // Relación 1:N con la colección que definiste en el modelo
+                entity.HasMany(c => c.Productos)
+                    .WithOne(p => p.Categoria)
+                    .HasForeignKey(p => p.claveCategoria);
+
+                // Relación N:1 con Departamento
+                entity.HasOne(c => c.Departamento)
+                    .WithMany(d => d.Categorias) // colección en DepartamentoEntity
+                    .HasForeignKey(c => c.claveDepartamento)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<ProveedorEntity>(entity =>
+            {
+                entity.ToTable("Proveedores");
+                entity.HasKey(p => p.claveProveedor).HasName("PK_ClaveProveedor");
+
+                entity.Property(p => p.claveProveedor).HasColumnType("varchar(18)");
+                entity.Property(p => p.direccion).HasColumnType("varchar(255)");
+                entity.Property(p => p.telefono).HasColumnType("varchar(15)");
+                entity.Property(p => p.tipo_proveedor).HasColumnType("varchar(20)");
+
+                // Campo de fecha con default en la base
+                entity.Property(p => p.FechaCreacion)
+                      .HasColumnType("timestamp")
+                      .HasDefaultValueSql("NOW()");
+            });
+
+            // Configuración de Empresa (Extensión de Proveedor)
+            modelBuilder.Entity<EmpresaEntity>(entity =>
+            {
+                entity.ToTable("Empresas");
+                // La clave primaria es también la foránea hacia Proveedor
+                entity.HasKey(e => e.claveProveedor);
+
+                entity.Property(e => e.razonSocial).HasColumnType("varchar(150)").IsRequired();
+                entity.Property(e => e.rfc).HasColumnType("varchar(13)").IsRequired();
+
+                 entity.HasOne(e => e.Proveedor)              // lado dependiente: Empresa apunta a Proveedor
+                 .WithOne(p => p.Empresa)               // lado principal: Proveedor tiene una Empresa
+                .HasForeignKey<EmpresaEntity>(e => e.claveProveedor)
+                     .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Configuración de Independiente (Extensión de Proveedor)
+            modelBuilder.Entity<IndependienteEntity>(entity =>
+            {
+                entity.ToTable("Independientes");
+                entity.HasKey(i => i.claveProveedor);
+
+                entity.Property(i => i.nombre).HasColumnType("varchar(100)").IsRequired();
+                entity.Property(i => i.apellidoPaterno).HasColumnType("varchar(100)");
+                entity.Property(i => i.apellidoMaterno).HasColumnType("varchar(100)");
+                entity.Property(i => i.tipoServicio).HasColumnType("varchar(50)");
+
+                   entity.HasOne(i => i.Proveedor)              // lado dependiente: Independiente apunta a Proveedor
+                  .WithOne(p => p.Independiente)         // lado principal: Proveedor tiene un Independiente
+               .HasForeignKey<IndependienteEntity>(i => i.claveProveedor)
+                 .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<ProductoEntity>(entity =>
+            {
+                entity.ToTable("Productos");
+                entity.HasKey(p => p.claveProducto).HasName("PK_ClaveProducto");
+
+                entity.Property(p => p.claveProducto)
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_producto()");
+
+                entity.Property(p => p.nombre)
+                    .HasColumnType("varchar(100)")
+                    .IsRequired();
+
+                entity.Property(p => p.descripcion)
+                    .HasColumnType("varchar(255)")
+                    .IsRequired();
+
+                entity.Property(p => p.precio)
+                    .HasColumnType("numeric(10,2)")
+                    .IsRequired();
+
+                entity.Property(p => p.margen_ganancia)
+                    .HasColumnType("numeric(5,2)")
+                    .HasDefaultValue(1.30m);
+
+                entity.Property(p => p.precio_venta)
+                    .HasColumnType("numeric(10,2)");
+
+                entity.Property(p => p.codigo_barras)
+                    .HasColumnType("varchar(13)");
+
+                entity.Property(p => p.tipo_producto)
+                    .HasColumnType("varchar(15)")
+                    .IsRequired();
+
+                entity.Property(p => p.cantidad)
+                    .HasColumnType("decimal(10,2)");
+
+                entity.Property(p => p.caducidad)
+                    .HasColumnType("boolean");
+
+                entity.Property(p => p.estado)
+                    .HasColumnType("boolean")
+                    .HasDefaultValue(true);
+
+                entity.Property(p => p.Imagen)
+                   .HasColumnType("varchar");
+
+
+                entity.HasOne(p => p.Categoria)               // <-- Usamos la propiedad virtual de tu clase
+               .WithMany(c => c.Productos)
+              .HasForeignKey(p => p.claveCategoria);
+
+                // 2. Relación con Unidad de Medida
+                entity.HasOne(p => p.UnidadMedida)           // <-- Referencia directa a la propiedad
+                    .WithMany(u => u.Productos)
+                    .HasForeignKey(p => p.claveUnidadMedida);
+
+                // 3. Relación con Unidad de Venta
+                entity.HasOne(p => p.UnidadVenta)
+                    .WithMany(u => u.Productos)
+                    .HasForeignKey(p => p.claveUnidadVenta);
+
+                // 4. Relación con Proveedor
+                entity.HasOne(p => p.Proveedor)
+                    .WithMany(pr => pr.Productos)
+                    .HasForeignKey(p => p.claveProveedor);
+            });
+
+            modelBuilder.Entity<EmpleadoEntity>(entity =>
+            {
+                entity.ToTable("Empleados"); // Nombre exacto de la tabla física
+
+                // Clave primaria
+                entity.HasKey(e => e.claveEmpleado);
+
+                // Mapeo de columnas
+                entity.Property(e => e.claveEmpleado)
+                    .HasColumnName("claveEmpleado")
+                    .HasColumnType("varchar(18)")
+                 .HasDefaultValueSql("generar_clave_empleado()");
+
+                entity.Property(e => e.nombre)
+                    .HasColumnName("nombre")
+                    .HasColumnType("varchar(50)")
+                    .IsRequired();
+
+                entity.Property(e => e.apellido_paterno)
+                    .HasColumnName("apellido_paterno")
+                    .HasColumnType("varchar(50)")
+                    .IsRequired();
+
+                entity.Property(e => e.apellido_materno)
+                    .HasColumnName("apellido_materno")
+                    .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.telefono)
+                    .HasColumnName("telefono")
+                    .HasColumnType("varchar(15)")
+                    .IsRequired();
+
+                entity.Property(e => e.curp)
+                    .HasColumnName("curp")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.HasIndex(e => e.curp)
+                    .IsUnique(); // CURP debe ser único
+
+                entity.Property(e => e.estado)
+                    .HasColumnName("estado")
+                    .HasColumnType("boolean") // Booleano en SQL Server
+                    .IsRequired();
+            });
+
+            modelBuilder.Entity<RolEntity>(entity =>
+            {
+                entity.ToTable("Roles");
+                entity.HasKey(r => r.ClaveRol);
+                entity.Property(r => r.ClaveRol)
+                    .HasColumnName("claveRol")
+                    .HasColumnType("varchar(18)");
+
+                // ← SIN .HasDefaultValueSql("generar_clave_rol()")
+                entity.Property(r => r.nombre)
+                    .HasColumnName("nombre")
+                    .HasColumnType("varchar(50)")
+                    .IsRequired();
+
+                entity.Property(r => r.descripcion)
+                    .HasColumnName("descripcion")
+                    .HasColumnType("varchar(150)");
+
+                entity.Property(r => r.activo)
+                    .HasColumnName("activo")
+                    .HasColumnType("boolean")
+                    .HasDefaultValue(true)
+                    .IsRequired();
+
+                entity.Property(r => r.fecha_creacion)
+                    .HasColumnName("fecha_creacion")
+                    .HasColumnType("date")
+                    .HasDefaultValueSql("CURRENT_DATE")
+                    .IsRequired();
+            });
+
+            modelBuilder.Entity<EmpleadoRolEntity>(entity =>
+            {
+                entity.ToTable("EmpleadoRol"); // Nombre exacto de la tabla física
+
+                // Clave primaria compuesta por 3 campos (indispensable para el historial)
+                entity.HasKey(er => new { er.claveEmpleado, er.claveRol, er.fecha_inicio });
+
+                // Mapeo de columnas
+                entity.Property(er => er.claveEmpleado)
+                    .HasColumnName("claveEmpleado")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(er => er.claveRol)
+                    .HasColumnName("claveRol")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(er => er.fecha_inicio)
+                    .HasColumnName("fecha_inicio")
+                    .HasColumnType("date") // DATE en PostgreSQL
+                    .HasDefaultValueSql("CURRENT_DATE")
+                    .IsRequired();
+
+                entity.Property(er => er.fecha_fin)
+                    .HasColumnName("fecha_fin")
+                    .HasColumnType("date"); // NULL por defecto según tu SQL
+
+                // Relaciones
+                entity.HasOne(er => er.Empleado)
+                    .WithMany(e => e.RolesHistorial) // Un empleado tiene muchos registros en su historial
+                    .HasForeignKey(er => er.claveEmpleado)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(er => er.Rol)
+                    .WithMany(r => r.EmpleadosAsignados) // Un rol puede estar en muchos registros de historial
+                    .HasForeignKey(er => er.claveRol)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<UsuarioEntity>(entity =>
+            {
+                entity.ToTable("Usuarios"); // Nombre exacto en Postgres
+
+                entity.HasKey(u => u.claveUsuario);
+
+                // Mapeo de columnas y valor por defecto del SP/Función de Postgres
+                entity.Property(u => u.claveUsuario)
+                    .HasColumnName("claveUsuario")
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_usuario()");
+
+                entity.Property(u => u.nombre_usuario)
+                    .HasColumnName("nombre_usuario")
+                    .HasColumnType("varchar(50)")
+                    .IsRequired();
+
+                // Definición de restricción UNIQUE para el login
+                entity.HasIndex(u => u.nombre_usuario)
+                    .IsUnique()
+                    .HasDatabaseName("uq_nombre_usuario");
+
+                entity.Property(u => u.contrasena)
+                    .HasColumnName("contrasena")
+                    .HasColumnType("varchar(250)")
+                    .IsRequired();
+
+                entity.Property(u => u.estado)
+                    .HasColumnName("estado")
+                    .HasDefaultValue(true);
+
+                entity.Property(u => u.claveEmpleado)
+                    .HasColumnName("claveEmpleado")
+                    .HasColumnType("varchar(18)");
+
+                // Configuración de la relación 1:1
+                // Un Usuario tiene un Empleado, y un Empleado tiene un Usuario
+                entity.HasOne(u => u.Empleado)
+                    .WithOne(e => e.Usuario)
+                    .HasForeignKey<UsuarioEntity>(u => u.claveEmpleado)
+                    .OnDelete(DeleteBehavior.SetNull); // O Cascade, según prefieras
+            });
+
+            modelBuilder.Entity<EquivalenciaUnidadEntity>(entity =>
+            {
+                entity.ToTable("EquivalenciasUnidad");
+
+                // 1. Clave Primaria Compuesta (PK de dos columnas)
+                entity.HasKey(e => new { e.claveProducto, e.claveUnidadCompra });
+
+                // 2. Mapeo de Atributos con tipos de datos SQL exactos
+                entity.Property(e => e.claveProducto)
+                    .HasColumnName("claveProducto")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(e => e.claveUnidadCompra)
+                    .HasColumnName("claveUnidadCompra")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(e => e.factor_conversion)
+                    .HasColumnName("factor_conversion")
+                    .HasColumnType("numeric") // Respetamos NUMERIC
+                    .IsRequired();
+
+                entity.Property(e => e.unidad_base)
+                    .HasColumnName("unidad_base")
+                    .HasColumnType("nombre_unidad_enum") // Tu ENUM de Postgres
+                    .IsRequired();
+
+                // 3. Configuración de Relaciones N:N (Foreign Keys)
+                entity.HasOne(e => e.Producto)
+                    .WithMany(p => p.Equivalencias) // Requiere la colección en ProductoEntity
+                    .HasForeignKey(e => e.claveProducto)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(e => e.UnidadCompra)
+                    .WithMany(u => u.EquivalenciasUnidad) // Requiere la colección en UnidadCompraEntity
+                    .HasForeignKey(e => e.claveUnidadCompra)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<EquivalenciaUnidadVentaEntity>(entity =>
+            {
+                entity.ToTable("EquivalenciasUnidadVentas");
+
+                // 1. Clave Primaria Compuesta (PK de dos columnas)
+                entity.HasKey(e => new { e.claveProducto, e.claveUnidadVenta });
+
+                // 2. Mapeo de Atributos con tipos de datos SQL exactos
+                entity.Property(e => e.claveProducto)
+                    .HasColumnName("claveProducto")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(e => e.claveUnidadVenta)
+                    .HasColumnName("claveUnidadVenta")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(e => e.factor_conversion)
+                    .HasColumnName("factor_conversion")
+                    .HasColumnType("numeric") // Respetamos NUMERIC
+                    .IsRequired();
+
+                entity.Property(e => e.unidad_base)
+                    .HasColumnName("unidad_base")
+                    .HasColumnType("nombre_unidad_enum") // Tu ENUM de Postgres
+                    .IsRequired();
+
+                // 3. Configuración de Relaciones N:N (Foreign Keys)
+                entity.HasOne(e => e.Producto)
+                    .WithMany(p => p.EquivalenciaProductoVenta) // Requiere la colección en ProductoEntity
+                    .HasForeignKey(e => e.claveProducto)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(e => e.UnidadVenta)
+                    .WithMany(u => u.EquivalenciasUnidadVenta) // Requiere la colección en UnidadCompraEntity
+                    .HasForeignKey(e => e.claveUnidadVenta)
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<PedidoEntity>(entity =>
+            {
+                entity.ToTable("Pedidos"); // Nombre exacto en Postgres
+
+                // Clave primaria
+                entity.HasKey(p => p.clavePedido);
+
+                // Mapeo de columnas (Case-sensitive para Postgres)
+                entity.Property(p => p.clavePedido)
+                    .HasColumnName("clavepedido")
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_pedido()");
+
+                entity.Property(p => p.fecha_pedido)
+                    .HasColumnName("fecha_pedido")
+                    .HasColumnType("timestamp")
+                    .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                entity.Property(p => p.estado)
+                    .HasColumnName("estado")
+                    .HasColumnType("varchar(20)")
+                    .IsRequired();
+
+                entity.Property(p => p.observaciones)
+                    .HasColumnName("observaciones")
+                    .HasColumnType("varchar(150)")
+                    .IsRequired();
+
+                entity.Property(p => p.claveUsuario)
+                    .HasColumnName("claveusuario")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(p => p.tipo_pedido)
+                    .HasColumnName("tipo_pedido")
+                    .HasColumnType("varchar(20)")
+                    .IsRequired();
+
+                entity.Property(p => p.claveProveedor)
+                    .HasColumnName("claveproveedor")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(p => p.total)
+                    .HasColumnName("total")
+                    .HasColumnType("numeric")
+                    .HasDefaultValue(0)
+                    .IsRequired();
+
+                // --- RELACIONES ACTIVADAS ---
+
+                // Relación con Usuarios(1:N)
+                entity.HasOne(p => p.Usuario)
+                    .WithMany(u => u.Pedidos) // <--- Aquí conectamos con la colección de UsuarioEntity
+                    .HasForeignKey(p => p.claveUsuario)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                // Relación con Proveedores (1:N)
+                entity.HasOne(p => p.Proveedor)
+                    .WithMany(pr => pr.Pedidos) // <--- Aquí conectamos con la colección de ProveedorEntity
+                    .HasForeignKey(p => p.claveProveedor)
+                    .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        }
+    }
+}

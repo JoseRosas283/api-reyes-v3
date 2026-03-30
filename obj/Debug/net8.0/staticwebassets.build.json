@@ -1,0 +1,949 @@
+{
+  "Version": 1,
+  "Hash": "NK+zMD+s7dK79j26hctEl7HqhmlAp6B88HPPbj2bfp0=",
+  "Source": "ReyesAR",
+  "BasePath": "_content/ReyesAR",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ReyesAR\\wwwroot",
+      "Source": "ReyesAR",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/076b3dfd-b5ee-408f-853f-f8ab0f1a35d7#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.png"
+    },
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\322fc411-62f3-46b0-a43c-cca8b9976863.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/322fc411-62f3-46b0-a43c-cca8b9976863#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\322fc411-62f3-46b0-a43c-cca8b9976863.png"
+    },
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/3ad6d46e-1c26-4801-a5cd-c0c153ff66a4#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.png"
+    },
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/61cc41fc-6e63-4d3b-8f07-e0f6ee78171e#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.png"
+    },
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a3f1b236-8c49-4a46-990e-ebc8b20c24da.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/a3f1b236-8c49-4a46-990e-ebc8b20c24da#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a3f1b236-8c49-4a46-990e-ebc8b20c24da.png"
+    },
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a7c9b2b2-cdb0-4421-b529-95737a352add.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/a7c9b2b2-cdb0-4421-b529-95737a352add#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a7c9b2b2-cdb0-4421-b529-95737a352add.png"
+    },
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/a80b1bd1-2a9a-4248-9fcc-7523afe5e6be#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.png"
+    },
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\ce12d38e-0204-4f32-9e2e-7cb01481d9b5.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/ce12d38e-0204-4f32-9e2e-7cb01481d9b5#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ce12d38e-0204-4f32-9e2e-7cb01481d9b5.png"
+    },
+    {
+      "Identity": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.png",
+      "SourceId": "ReyesAR",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\",
+      "BasePath": "_content/ReyesAR",
+      "RelativePath": "uploads/fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m1fs2nxhpu",
+      "Integrity": "KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\076b3dfd-b5ee-408f-853f-f8ab0f1a35d7.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/322fc411-62f3-46b0-a43c-cca8b9976863.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\322fc411-62f3-46b0-a43c-cca8b9976863.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/322fc411-62f3-46b0-a43c-cca8b9976863.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/322fc411-62f3-46b0-a43c-cca8b9976863.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\322fc411-62f3-46b0-a43c-cca8b9976863.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\3ad6d46e-1c26-4801-a5cd-c0c153ff66a4.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\61cc41fc-6e63-4d3b-8f07-e0f6ee78171e.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a3f1b236-8c49-4a46-990e-ebc8b20c24da.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a3f1b236-8c49-4a46-990e-ebc8b20c24da.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/a3f1b236-8c49-4a46-990e-ebc8b20c24da.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a3f1b236-8c49-4a46-990e-ebc8b20c24da.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a3f1b236-8c49-4a46-990e-ebc8b20c24da.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a7c9b2b2-cdb0-4421-b529-95737a352add.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a7c9b2b2-cdb0-4421-b529-95737a352add.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/a7c9b2b2-cdb0-4421-b529-95737a352add.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a7c9b2b2-cdb0-4421-b529-95737a352add.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a7c9b2b2-cdb0-4421-b529-95737a352add.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\a80b1bd1-2a9a-4248-9fcc-7523afe5e6be.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ce12d38e-0204-4f32-9e2e-7cb01481d9b5.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\ce12d38e-0204-4f32-9e2e-7cb01481d9b5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ce12d38e-0204-4f32-9e2e-7cb01481d9b5.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ce12d38e-0204-4f32-9e2e-7cb01481d9b5.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\ce12d38e-0204-4f32-9e2e-7cb01481d9b5.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.m1fs2nxhpu.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m1fs2nxhpu"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.png",
+      "AssetFile": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\wwwroot\\uploads\\fc9d07e4-173d-4f76-8ce0-ad1d7cffbaec.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "542381"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Mar 2026 00:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KomgzQiAfw4IwR166YAMd2bcHPZy1TKy5yJzdP9Y9VI="
+        }
+      ]
+    }
+  ]
+}
