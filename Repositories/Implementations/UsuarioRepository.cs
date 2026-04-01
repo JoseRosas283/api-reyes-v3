@@ -50,13 +50,22 @@ public class UsuarioRepository : IUsuarioRepository
         var pContrasena = new NpgsqlParameter("p_contrasena", usuario.contrasena);
         var pClaveEmpleado = new NpgsqlParameter("p_claveEmpleado", usuario.claveEmpleado);
 
-        // CALL ejecuta el procedimiento con las validaciones de longitud y rol
         await _context.Database.ExecuteSqlRawAsync(
             "CALL \"insertar_usuario\"(@p_nombre_usuario, @p_contrasena, @p_claveEmpleado)",
             pNombre, pContrasena, pClaveEmpleado
         );
 
-        return usuario;
+        // Limpiamos el caché de EF Core para que vaya directo a PostgreSQL
+        _context.ChangeTracker.Clear();
+
+        var creado = await _context.Usuarios
+            .AsNoTracking()
+            .FirstOrDefaultAsync(u => u.nombre_usuario == usuario.nombre_usuario);
+
+        if (creado == null)
+            throw new InvalidOperationException("No se pudo recuperar el usuario después de crearlo.");
+
+        return creado;
     }
 
     // Task UpdateAsync(string claveUsuario, UsuarioEntity usuario);

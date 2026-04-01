@@ -23,6 +23,9 @@ namespace ReyesAR.Models
 
         public virtual ICollection<PedidoEntity> Pedidos { get; set; } = new List<PedidoEntity>();
 
+        public virtual ICollection<RepresentanteEntity> Representantes { get; set; } = new List<RepresentanteEntity>();
+        public virtual ICollection<EntregaEntity> Entregas { get; set; } = new List<EntregaEntity>();
+
     }
 }
     public class EmpresaEntity

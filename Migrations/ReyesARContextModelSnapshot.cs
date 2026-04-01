@@ -40,6 +40,69 @@ namespace ReyesAR.Migrations
                     b.ToTable("Empresas", (string)null);
                 });
 
+            modelBuilder.Entity("EntregaEntity", b =>
+                {
+                    b.Property<string>("claveEntrega")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("varchar(18)")
+                        .HasColumnName("claveEntrega")
+                        .HasDefaultValueSql("generar_clave_entrega()");
+
+                    b.Property<string>("clavePedido")
+                        .IsRequired()
+                        .HasColumnType("varchar(18)");
+
+                    b.Property<string>("claveProveedor")
+                        .IsRequired()
+                        .HasColumnType("varchar(18)");
+
+                    b.Property<string>("claveRepresentante")
+                        .HasColumnType("varchar(18)")
+                        .HasColumnName("claveRepresentante");
+
+                    b.Property<string>("claveUsuario")
+                        .IsRequired()
+                        .HasColumnType("varchar(18)");
+
+                    b.Property<string>("descripcion")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("descripcion");
+
+                    b.Property<string>("estado")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)")
+                        .HasColumnName("estado");
+
+                    b.Property<DateTime>("fecha_entrega")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp")
+                        .HasColumnName("fecha_entrega")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                    b.Property<string>("tipo_entrega")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("tipo_entrega");
+
+                    b.Property<decimal>("total")
+                        .HasColumnType("numeric(10,2)")
+                        .HasColumnName("total");
+
+                    b.HasKey("claveEntrega");
+
+                    b.HasIndex("clavePedido")
+                        .IsUnique();
+
+                    b.HasIndex("claveProveedor");
+
+                    b.HasIndex("claveRepresentante");
+
+                    b.HasIndex("claveUsuario");
+
+                    b.ToTable("Entregas", (string)null);
+                });
+
             modelBuilder.Entity("IndependienteEntity", b =>
                 {
                     b.Property<string>("claveProveedor")
@@ -126,6 +189,37 @@ namespace ReyesAR.Migrations
                         .HasName("PK_ClaveDepartamento");
 
                     b.ToTable("Departamentos", (string)null);
+                });
+
+            modelBuilder.Entity("ReyesAR.Models.DetallePedidoEntity", b =>
+                {
+                    b.Property<string>("Clavepedido")
+                        .HasColumnType("varchar(18)")
+                        .HasColumnName("Clavepedido");
+
+                    b.Property<string>("Claveproducto")
+                        .HasColumnType("varchar(18)")
+                        .HasColumnName("Claveproducto");
+
+                    b.Property<decimal>("cantidad")
+                        .HasColumnType("numeric(18,2)")
+                        .HasColumnName("cantidad");
+
+                    b.Property<string>("descripcion")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)")
+                        .HasColumnName("descripcion");
+
+                    b.Property<string>("tipo_detalle")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)")
+                        .HasColumnName("tipo_detalle");
+
+                    b.HasKey("Clavepedido", "Claveproducto");
+
+                    b.HasIndex("Claveproducto");
+
+                    b.ToTable("DetallePedido", (string)null);
                 });
 
             modelBuilder.Entity("ReyesAR.Models.EmpleadoEntity", b =>
@@ -416,6 +510,57 @@ namespace ReyesAR.Migrations
                     b.ToTable("Proveedores", (string)null);
                 });
 
+            modelBuilder.Entity("ReyesAR.Models.RepresentanteEntity", b =>
+                {
+                    b.Property<string>("claveRepresentante")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("varchar(18)")
+                        .HasColumnName("claveRepresentante")
+                        .HasDefaultValueSql("generar_clave_representante()");
+
+                    b.Property<string>("apellido_materno")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("apellido_materno");
+
+                    b.Property<string>("apellido_paterno")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("apellido_paterno");
+
+                    b.Property<string>("claveProveedor")
+                        .IsRequired()
+                        .HasColumnType("varchar(18)")
+                        .HasColumnName("claveproveedor");
+
+                    b.Property<bool>("estado")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true)
+                        .HasColumnName("estado");
+
+                    b.Property<string>("nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)")
+                        .HasColumnName("nombre");
+
+                    b.Property<string>("telefono")
+                        .IsRequired()
+                        .HasColumnType("varchar(15)")
+                        .HasColumnName("telefono");
+
+                    b.Property<string>("tipo_representante")
+                        .IsRequired()
+                        .HasColumnType("tipo_representante_enum")
+                        .HasColumnName("tipo_representante");
+
+                    b.HasKey("claveRepresentante");
+
+                    b.HasIndex("claveProveedor");
+
+                    b.ToTable("Representantes", (string)null);
+                });
+
             modelBuilder.Entity("ReyesAR.Models.RolEntity", b =>
                 {
                     b.Property<string>("ClaveRol")
@@ -591,6 +736,41 @@ namespace ReyesAR.Migrations
                     b.Navigation("Proveedor");
                 });
 
+            modelBuilder.Entity("EntregaEntity", b =>
+                {
+                    b.HasOne("ReyesAR.Models.PedidoEntity", "Pedido")
+                        .WithOne("Entrega")
+                        .HasForeignKey("EntregaEntity", "clavePedido")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ReyesAR.Models.ProveedorEntity", "Proveedor")
+                        .WithMany("Entregas")
+                        .HasForeignKey("claveProveedor")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ReyesAR.Models.RepresentanteEntity", "Representante")
+                        .WithMany("Entregas")
+                        .HasForeignKey("claveRepresentante")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .HasConstraintName("FK_Entregas_Representantes");
+
+                    b.HasOne("ReyesAR.Models.UsuarioEntity", "Usuario")
+                        .WithMany("Entregas")
+                        .HasForeignKey("claveUsuario")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Pedido");
+
+                    b.Navigation("Proveedor");
+
+                    b.Navigation("Representante");
+
+                    b.Navigation("Usuario");
+                });
+
             modelBuilder.Entity("IndependienteEntity", b =>
                 {
                     b.HasOne("ReyesAR.Models.ProveedorEntity", "Proveedor")
@@ -611,6 +791,25 @@ namespace ReyesAR.Migrations
                         .IsRequired();
 
                     b.Navigation("Departamento");
+                });
+
+            modelBuilder.Entity("ReyesAR.Models.DetallePedidoEntity", b =>
+                {
+                    b.HasOne("ReyesAR.Models.PedidoEntity", "Pedido")
+                        .WithMany("Detalles")
+                        .HasForeignKey("Clavepedido")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ReyesAR.Models.ProductoEntity", "Producto")
+                        .WithMany("Detalles")
+                        .HasForeignKey("Claveproducto")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Pedido");
+
+                    b.Navigation("Producto");
                 });
 
             modelBuilder.Entity("ReyesAR.Models.EmpleadoRolEntity", b =>
@@ -724,6 +923,17 @@ namespace ReyesAR.Migrations
                     b.Navigation("UnidadVenta");
                 });
 
+            modelBuilder.Entity("ReyesAR.Models.RepresentanteEntity", b =>
+                {
+                    b.HasOne("ReyesAR.Models.ProveedorEntity", "Proveedor")
+                        .WithMany("Representantes")
+                        .HasForeignKey("claveProveedor")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Proveedor");
+                });
+
             modelBuilder.Entity("ReyesAR.Models.UsuarioEntity", b =>
                 {
                     b.HasOne("ReyesAR.Models.EmpleadoEntity", "Empleado")
@@ -753,8 +963,17 @@ namespace ReyesAR.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ReyesAR.Models.PedidoEntity", b =>
+                {
+                    b.Navigation("Detalles");
+
+                    b.Navigation("Entrega");
+                });
+
             modelBuilder.Entity("ReyesAR.Models.ProductoEntity", b =>
                 {
+                    b.Navigation("Detalles");
+
                     b.Navigation("EquivalenciaProductoVenta");
 
                     b.Navigation("Equivalencias");
@@ -765,12 +984,21 @@ namespace ReyesAR.Migrations
                     b.Navigation("Empresa")
                         .IsRequired();
 
+                    b.Navigation("Entregas");
+
                     b.Navigation("Independiente")
                         .IsRequired();
 
                     b.Navigation("Pedidos");
 
                     b.Navigation("Productos");
+
+                    b.Navigation("Representantes");
+                });
+
+            modelBuilder.Entity("ReyesAR.Models.RepresentanteEntity", b =>
+                {
+                    b.Navigation("Entregas");
                 });
 
             modelBuilder.Entity("ReyesAR.Models.RolEntity", b =>
@@ -797,6 +1025,8 @@ namespace ReyesAR.Migrations
 
             modelBuilder.Entity("ReyesAR.Models.UsuarioEntity", b =>
                 {
+                    b.Navigation("Entregas");
+
                     b.Navigation("Pedidos");
                 });
 #pragma warning restore 612, 618

@@ -21,6 +21,9 @@ namespace ReyesAR.BasedeDatos
         public virtual DbSet<EquivalenciaUnidadEntity> EquivalenciasUnidad { get; set; }
         public virtual DbSet<EquivalenciaUnidadVentaEntity> EquivalenciasUnidadVentas { get; set; }
         public virtual DbSet<PedidoEntity> Pedidos { get; set; }
+        public virtual DbSet<DetallePedidoEntity> DetallePedido { get; set; }
+        public virtual DbSet<RepresentanteEntity> Representantes { get; set; }
+        public virtual DbSet<EntregaEntity> Entregas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -604,8 +607,176 @@ namespace ReyesAR.BasedeDatos
                     .WithMany(pr => pr.Pedidos) // <--- Aquí conectamos con la colección de ProveedorEntity
                     .HasForeignKey(p => p.claveProveedor)
                     .OnDelete(DeleteBehavior.Restrict);
-        });
+            });
 
+            modelBuilder.Entity<DetallePedidoEntity>(entity =>
+            {
+                entity.ToTable("DetallePedido"); // Nombre exacto de la tabla física
+
+                // Clave primaria compuesta
+                entity.HasKey(d => new { d.Clavepedido, d.Claveproducto });
+
+                // Mapeo de columnas
+                entity.Property(d => d.Clavepedido)
+                    .HasColumnName("Clavepedido")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(d => d.Claveproducto)
+                    .HasColumnName("Claveproducto")
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(d => d.cantidad)
+                    .HasColumnName("cantidad")
+                    .HasColumnType("numeric(18,2)")
+                    .IsRequired();
+
+                entity.Property(d => d.descripcion)
+                    .HasColumnName("descripcion")
+                    .HasColumnType("varchar(255)");
+
+                entity.Property(d => d.tipo_detalle)
+                    .HasColumnName("tipo_detalle")
+                    .HasColumnType("varchar(20)")
+                    .IsRequired();
+
+                // Relaciones
+                entity.HasOne(d => d.Pedido)
+                    .WithMany(p => p.Detalles) // Un pedido puede tener muchos detalles
+                    .HasForeignKey(d => d.Clavepedido)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(d => d.Producto)
+                    .WithMany(pr => pr.Detalles) // Un producto puede aparecer en muchos detalles
+                    .HasForeignKey(d => d.Claveproducto)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<RepresentanteEntity>(entity =>
+            {
+                entity.ToTable("Representantes");
+
+                // Llave Primaria
+                entity.HasKey(e => e.claveRepresentante);
+
+                // 2. Mapeo detallado de campos con tipos de datos de Postgres
+                entity.Property(e => e.claveRepresentante)
+                      .HasColumnName("claveRepresentante")
+                      .HasColumnType("varchar(18)") // Coincide con tu DEFAULT generar_clave_representante()
+                      .HasDefaultValueSql("generar_clave_representante()");
+
+                entity.Property(e => e.nombre)
+                      .IsRequired()
+                      .HasColumnName("nombre")
+                      .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.apellido_paterno)
+                      .IsRequired()
+                      .HasColumnName("apellido_paterno")
+                      .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.apellido_materno)
+                      .HasColumnName("apellido_materno")
+                      .HasColumnType("varchar(50)");
+
+                entity.Property(e => e.telefono)
+                      .IsRequired()
+                      .HasColumnName("telefono")
+                      .HasColumnType("varchar(15)");
+
+                entity.Property(e => e.estado)
+                      .HasColumnName("estado")
+                      .HasColumnType("boolean")
+                      .HasDefaultValue(true);
+
+                entity.Property(e => e.claveProveedor)
+                      .IsRequired()
+                      .HasColumnName("claveproveedor")
+                      .HasColumnType("varchar(18)");
+
+                // 3. Mapeo del ENUM (Crucial para que no lo mande como texto simple)
+                entity.Property(e => e.tipo_representante)
+                      .IsRequired()
+                      .HasColumnName("tipo_representante")
+                      .HasColumnType("tipo_representante_enum");
+
+                // --- RELACIÓN ---
+                entity.HasOne(d => d.Proveedor)
+                      .WithMany(p => p.Representantes)
+                      .HasForeignKey(d => d.claveProveedor)
+                      .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<EntregaEntity>(entity =>
+            {
+                // 1. Tabla y Llave Primaria
+                entity.ToTable("Entregas");
+                entity.HasKey(e => e.claveEntrega);
+                entity.Property(e => e.claveEntrega)
+                      .HasColumnName("claveEntrega")
+                      .HasColumnType("varchar(18)")
+                      .HasDefaultValueSql("generar_clave_entrega()");
+
+                // 2. Configuración de Columnas
+                entity.Property(e => e.fecha_entrega)
+                      .HasColumnName("fecha_entrega")
+                      .HasColumnType("timestamp")
+                      .HasDefaultValueSql("CURRENT_TIMESTAMP");
+                entity.Property(e => e.estado)
+                      .IsRequired()
+                      .HasColumnName("estado")
+                      .HasColumnType("varchar(20)");
+                entity.Property(e => e.total)
+                      .IsRequired()
+                      .HasColumnName("total")
+                      .HasColumnType("numeric(10,2)");
+                entity.Property(e => e.descripcion)
+                      .IsRequired()
+                      .HasColumnName("descripcion")
+                      .HasColumnType("varchar(255)");
+                entity.Property(e => e.tipo_entrega)
+                      .IsRequired()
+                      .HasColumnName("tipo_entrega")
+                      .HasColumnType("varchar(50)");
+
+                // ✅ Declarar claveRepresentante ANTES de usarla en la relación
+                entity.Property(e => e.claveRepresentante)
+                      .HasColumnName("claveRepresentante")
+                      .HasColumnType("varchar(18)")
+                      .IsRequired(false);
+
+                // 3. MAPEO DE RELACIONES
+                // --- RELACIÓN 1:1 (Pedidos - Entregas) ---
+                // Un pedido solo tiene una entrega. La clavePedido debe ser única en la tabla Entregas.
+                entity.HasIndex(e => e.clavePedido).IsUnique();
+                entity.HasOne(e => e.Pedido)
+                      .WithOne(p => p.Entrega) // En PedidoEntity: public virtual EntregaEntity Entrega { get; set; }
+                      .HasForeignKey<EntregaEntity>(e => e.clavePedido)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                // --- RELACIÓN 1:N (Proveedores - Entregas) ---
+                // Un proveedor puede tener muchas entregas asociadas.
+                entity.HasOne(e => e.Proveedor)
+                      .WithMany(p => p.Entregas) // En ProveedorEntity: public virtual ICollection<EntregaEntity> Entregas { get; set; }
+                      .HasForeignKey(e => e.claveProveedor)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                // --- RELACIÓN 1:N (Usuarios - Entregas) ---
+                // Un usuario (empleado/almacenista) puede registrar muchas entregas.
+                entity.HasOne(e => e.Usuario)
+                      .WithMany(u => u.Entregas) // En UsuarioEntity: public virtual ICollection<EntregaEntity> Entregas { get; set; }
+                      .HasForeignKey(e => e.claveUsuario)
+                      .OnDelete(DeleteBehavior.Restrict);
+
+                // --- RELACIÓN 1:N (Representantes - Entregas) ---
+                // Opcional: Un representante puede estar en varias entregas.
+                entity.HasOne(e => e.Representante)
+                      .WithMany(r => r.Entregas)
+                      .HasForeignKey(e => e.claveRepresentante)
+                      .HasConstraintName("FK_Entregas_Representantes")
+                      .OnDelete(DeleteBehavior.SetNull);
+            });
         }
     }
 }

@@ -13,30 +13,26 @@ public class PedidoRepository : IPedidoRepository
         _context = context;
     }
 
-    // 1. Task<IEnumerable<PedidoEntity>> GetAllAsync()
+    // 1. GetAllAsync - Sin Include para evitar ciclos
     public async Task<IEnumerable<PedidoEntity>> GetAllAsync()
     {
         return await _context.Pedidos
-            .Include(p => p.Usuario)
-            .Include(p => p.Proveedor)
             .AsNoTracking()
             .ToListAsync();
     }
 
-    // 2. Task<PedidoEntity?> GetByIdAsync(string clavePedido)
+    // 2. GetByIdAsync - Sin Include para evitar ciclos
     public async Task<PedidoEntity?> GetByIdAsync(string clavePedido)
     {
         return await _context.Pedidos
-            .Include(p => p.Usuario)
-            .Include(p => p.Proveedor)
+            .AsNoTracking()
             .FirstOrDefaultAsync(p => p.clavePedido == clavePedido);
     }
 
-    // 3. Task<PedidoEntity> CreateAsync(PedidoEntity pedido)
+    // 3. CreateAsync - Ejecuta el SP y recupera el pedido recién creado
     public async Task<PedidoEntity> CreateAsync(PedidoEntity pedido)
     {
         var sql = "CALL \"insertar_pedido\"(@p0, @p1, @p2, @p3, @p4::tipo_pedido_enum, @p5)";
-
         await _context.Database.ExecuteSqlRawAsync(sql,
             pedido.estado,
             pedido.observaciones,
@@ -46,11 +42,17 @@ public class PedidoRepository : IPedidoRepository
             pedido.total
         );
 
-        return pedido;
+        // ✅ Recupera el pedido recién insertado por el SP
+        var pedidoCreado = await _context.Pedidos
+            .AsNoTracking()
+            .Where(p => p.claveUsuario == pedido.claveUsuario)
+            .OrderByDescending(p => p.fecha_pedido)
+            .FirstOrDefaultAsync();
+
+        return pedidoCreado ?? pedido;
     }
 
-    // 4. Task UpdateAsync(string clavePedido, PedidoDTO pedido) 
-    // ¡OJO! Aquí estaba el error. Ahora recibe PedidoDTO como dice tu contrato.
+    // 4. UpdateAsync
     public async Task UpdateAsync(string clavePedido, PedidoDTO pedido)
     {
         var entity = await _context.Pedidos
@@ -58,16 +60,14 @@ public class PedidoRepository : IPedidoRepository
 
         if (entity != null)
         {
-            // Mapeamos los datos del DTO a la Entidad de ReyesAR
             entity.estado = pedido.estado;
             entity.observaciones = pedido.observaciones;
             entity.total = pedido.total;
-
             await _context.SaveChangesAsync();
         }
     }
 
-    // 5. Task DeleteAsync(string clavePedido)
+    // 5. DeleteAsync - Eliminación lógica
     public async Task DeleteAsync(string clavePedido)
     {
         var entity = await _context.Pedidos

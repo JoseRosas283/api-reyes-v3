@@ -158,6 +158,100 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DetallePedidoController",
+    "Method": "GetAll",
+    "RelativePath": "api/DetallePedido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DetallePedidoController",
+    "Method": "Create",
+    "RelativePath": "api/DetallePedido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "detalleDto",
+        "Type": "ReyesAR.DTO.DetallePedidoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DetallePedidoController",
+    "Method": "GetById",
+    "RelativePath": "api/DetallePedido/consultarpedido/{clavePedido}/producto/{claveProducto}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clavePedido",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DetallePedidoController",
+    "Method": "Update",
+    "RelativePath": "api/DetallePedido/pedido/{clavePedido}/producto/{claveProducto}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clavePedido",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "detalleDto",
+        "Type": "ReyesAR.DTO.DetallePedidoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DetallePedidoController",
+    "Method": "Delete",
+    "RelativePath": "api/DetallePedido/pedido/{clavePedido}/producto/{claveProducto}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clavePedido",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EmpleadoController",
     "Method": "GetAll",
     "RelativePath": "api/Empleado",
@@ -356,6 +450,298 @@
       {
         "Name": "fechaInicio",
         "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EntregaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Entrega",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EntregaEntity, ReyesAR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EntregaController",
+    "Method": "Create",
+    "RelativePath": "api/Entrega",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entregaDTO",
+        "Type": "ReyesAR.DTO.EntregaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EntregaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EntregaController",
+    "Method": "GetByClave",
+    "RelativePath": "api/Entrega/{claveEntrega}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrega",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EntregaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EntregaController",
+    "Method": "Update",
+    "RelativePath": "api/Entrega/{claveEntrega}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrega",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "entregaDTO",
+        "Type": "ReyesAR.DTO.EntregaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "EntregaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EntregaController",
+    "Method": "Delete",
+    "RelativePath": "api/Entrega/{claveEntrega}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrega",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EquivalenciaUnidadController",
+    "Method": "GetAll",
+    "RelativePath": "api/EquivalenciaUnidad",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EquivalenciaUnidadController",
+    "Method": "Create",
+    "RelativePath": "api/EquivalenciaUnidad",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.EquivalenciaUnidadDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EquivalenciaUnidadController",
+    "Method": "GetById",
+    "RelativePath": "api/EquivalenciaUnidad/producto/{claveProducto}/unidad/{claveUnidadCompra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveUnidadCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EquivalenciaUnidadController",
+    "Method": "Update",
+    "RelativePath": "api/EquivalenciaUnidad/producto/{claveProducto}/unidad/{claveUnidadCompra}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveUnidadCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.EquivalenciaUnidadDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EquivalenciaUnidadController",
+    "Method": "Delete",
+    "RelativePath": "api/EquivalenciaUnidad/producto/{claveProducto}/unidad/{claveUnidadCompra}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveUnidadCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PedidoController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pedido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PedidoController",
+    "Method": "Create",
+    "RelativePath": "api/Pedido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pedido",
+        "Type": "ReyesAR.DTO.PedidoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PedidoController",
+    "Method": "Update",
+    "RelativePath": "api/Pedido/actualizarPedido/{clavePedido}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clavePedido",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "pedido",
+        "Type": "ReyesAR.DTO.PedidoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PedidoController",
+    "Method": "GetById",
+    "RelativePath": "api/Pedido/ConsultarPedido/{clavePedido}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clavePedido",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PedidoController",
+    "Method": "Delete",
+    "RelativePath": "api/Pedido/eliminarPedido/{clavePedido}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clavePedido",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -760,6 +1146,85 @@
     ]
   },
   {
+    "ContainingType": "RepresentanteController",
+    "Method": "GetAll",
+    "RelativePath": "api/Representante",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepresentanteController",
+    "Method": "Create",
+    "RelativePath": "api/Representante",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "representanteDto",
+        "Type": "ReyesAR.DTO.RepresentanteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepresentanteController",
+    "Method": "GetById",
+    "RelativePath": "api/Representante/{claveRepresentante}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveRepresentante",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepresentanteController",
+    "Method": "Update",
+    "RelativePath": "api/Representante/{claveRepresentante}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveRepresentante",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "representanteDto",
+        "Type": "ReyesAR.DTO.RepresentanteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepresentanteController",
+    "Method": "Delete",
+    "RelativePath": "api/Representante/{claveRepresentante}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveRepresentante",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AbarrotesRS.Controllers.RolesController",
     "Method": "GetAll",
     "RelativePath": "api/Roles",
@@ -1070,6 +1535,101 @@
       {
         "Name": "dto",
         "Type": "ReyesAR.DTO.UnidadVentaUpdateEstadoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UsuarioController",
+    "Method": "GetAll",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UsuarioController",
+    "Method": "Create",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.UsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UsuarioController",
+    "Method": "GetById",
+    "RelativePath": "api/Usuario/{claveUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveUsuario",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UsuarioController",
+    "Method": "Delete",
+    "RelativePath": "api/Usuario/{claveUsuario}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveUsuario",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UsuarioController",
+    "Method": "Update",
+    "RelativePath": "api/Usuario/actualizar/{claveUsuario}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveUsuario",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.UsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UsuarioController",
+    "Method": "GetByUsername",
+    "RelativePath": "api/Usuario/username/{nombre_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre_usuario",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

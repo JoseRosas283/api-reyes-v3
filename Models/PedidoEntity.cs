@@ -10,7 +10,6 @@
 
         // FK exacta según tu SQL
         public string claveUsuario { get; set; } = null!;
-
         public string tipo_pedido { get; set; } = null!;
         public string claveProveedor { get; set; } = null!;
         public decimal total { get; set; } = 0;
@@ -19,5 +18,7 @@
         // Asumiendo que tu entidad de usuarios se llama UsuarioEntity
         public virtual UsuarioEntity Usuario { get; set; } = null!;
         public virtual ProveedorEntity Proveedor { get; set; } = null!;
+        public virtual ICollection<DetallePedidoEntity> Detalles { get; set; } = new List<DetallePedidoEntity>();
+        public virtual EntregaEntity? Entrega { get; set; }
     }
 }

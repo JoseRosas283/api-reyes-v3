@@ -6,13 +6,13 @@ namespace ReyesAR.Service.Interface
     public interface IPedidoService
     {
         // Obtener todos los pedidos con sus detalles
-        Task<IEnumerable<PedidoEntity>> GetAllAsync();
+        Task<IEnumerable<PedidoDTO>> GetAllAsync();
 
         // Obtener un pedido específico por clave
-        Task<PedidoEntity?> GetByIdAsync(string clavePedido);
+        Task<PedidoDTO?> GetByIdAsync(string clavePedido);
 
         // Crear un nuevo pedido a partir de un DTO
-        Task<PedidoEntity> CreateAsync(PedidoDTO pedido);
+        Task<PedidoDTO> CreateAsync(PedidoDTO pedido);
 
         // Actualizar un pedido existente
         Task UpdateAsync(string clavePedido, PedidoDTO pedido);

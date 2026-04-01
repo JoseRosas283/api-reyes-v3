@@ -44,6 +44,13 @@ builder.Services.AddScoped<IEquivalenciaUnidadService, EquivalenciaUnidadService
 // builder.Services.AddScoped<ReyesAR.Service.Interface.IEquivalenciaUnidadVentaService, EquivalenciaUnidadVentaService>();
 builder.Services.AddScoped<IPedidoRepository, PedidoRepository>();
 builder.Services.AddScoped<IPedidoService, PedidoService>();
+builder.Services.AddScoped<IDetallePedidoRepository, DetallePedidoRepository>();
+builder.Services.AddScoped<IDetallePedidoService, DetallePedidoService>();
+builder.Services.AddScoped<IRepresentanteRepository, RepresentanteRepository>();
+builder.Services.AddScoped<IRepresentanteService, RepresentanteService>();
+builder.Services.AddScoped<IEntregaRepository, EntregaRepository>();
+builder.Services.AddScoped<IEntregaService, EntregaService>();
+
 
 builder.Services.AddHttpContextAccessor();
 

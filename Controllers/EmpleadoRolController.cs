@@ -59,7 +59,7 @@ public class EmpleadoRolController : ControllerBase
                 {
                     claveEmpleado = resultado.claveEmpleado,
                     claveRol = resultado.claveRol,
-                    fechaInicio = resultado.fecha_inicio.ToString("yyyy-MM-dd")
+                    fechaInicio = resultado.fecha_inicio
                 },
                 resultado);
         }

@@ -60,7 +60,6 @@ public class UsuarioService : IUsuarioService
     // 4. CREAR: Valida campos y ejecuta el SP "insertar_usuario"
     public async Task<UsuarioDTO> CreateUsuarioAsync(UsuarioDTO usuarioDto)
     {
-        // --- VALIDACIONES BÁSICAS DE CAMPOS NULL O VACÍOS ---
         if (string.IsNullOrWhiteSpace(usuarioDto.nombre_usuario))
             throw new ArgumentException("El nombre de usuario es requerido.");
 
@@ -70,7 +69,6 @@ public class UsuarioService : IUsuarioService
         if (string.IsNullOrWhiteSpace(usuarioDto.claveEmpleado))
             throw new ArgumentException("Debe asignar un empleado al usuario.");
 
-        // Mapeo a Entity para el repositorio
         var entidad = new UsuarioEntity
         {
             nombre_usuario = usuarioDto.nombre_usuario.Trim(),
@@ -78,20 +76,17 @@ public class UsuarioService : IUsuarioService
             claveEmpleado = usuarioDto.claveEmpleado.Trim()
         };
 
-        try
-        {
-            // El repositorio llama a: CALL "insertar_usuario"(...)
-            var resultado = await _repository.CreateAsync(entidad);
+        // El repositorio ya lanza excepción si algo falla
+        var resultado = await _repository.CreateAsync(entidad);
 
-            // Retornamos el DTO con la clave generada por Postgres
-            usuarioDto.claveUsuario = resultado.claveUsuario;
-            return usuarioDto;
-        }
-        catch (Exception ex)
+        // Mapeamos el resultado con la claveUsuario generada por PostgreSQL
+        return new UsuarioDTO
         {
-            // Aquí capturamos los RAISE EXCEPTION del SP (Longitud, Rol Intendente, Duplicados)
-            throw new InvalidOperationException($"No se pudo crear el usuario: {ex.Message}");
-        }
+            claveUsuario = resultado.claveUsuario,
+            nombre_usuario = resultado.nombre_usuario,
+            estado = resultado.estado,
+            claveEmpleado = resultado.claveEmpleado
+        };
     }
 
     // 5. ACTUALIZAR (Promesa)

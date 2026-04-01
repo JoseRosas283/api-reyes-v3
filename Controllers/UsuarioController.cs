@@ -54,19 +54,18 @@ public class UsuarioController : ControllerBase
         {
             var resultado = await _service.CreateUsuarioAsync(dto);
 
-            // Retorna 201 Created y la ubicación para consultar el nuevo usuario
-            return CreatedAtAction(nameof(GetById),
-                new { claveUsuario = resultado.claveUsuario },
-                new { mensaje = "Usuario creado con éxito", data = resultado });
+            return CreatedAtAction(
+                actionName: nameof(GetById),
+                controllerName: "Usuario",
+                routeValues: new { claveUsuario = resultado.claveUsuario },
+                value: new { mensaje = "Usuario creado con éxito", data = resultado });
         }
         catch (ArgumentException ex)
         {
-            // Errores de validación (campos vacíos o contraseña > 9 caracteres)
             return BadRequest(new { mensaje = "Error de validación", detalle = ex.Message });
         }
         catch (InvalidOperationException ex)
         {
-            // Captura los errores del SP (Intendente, Empleado no existe, etc.)
             return Conflict(new { mensaje = "Regla de negocio violada", detalle = ex.Message });
         }
         catch (Exception ex)

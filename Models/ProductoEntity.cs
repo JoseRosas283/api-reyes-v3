@@ -38,5 +38,6 @@ namespace ReyesAR.Models
 
         public virtual ICollection<EquivalenciaUnidadEntity> Equivalencias { get; set; } = new List<EquivalenciaUnidadEntity>();
         public virtual ICollection<EquivalenciaUnidadVentaEntity> EquivalenciaProductoVenta { get; set; } = new List<EquivalenciaUnidadVentaEntity>();
+        public virtual ICollection<DetallePedidoEntity> Detalles { get; set; } = new List<DetallePedidoEntity>();
     }
 }

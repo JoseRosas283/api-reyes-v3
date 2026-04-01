@@ -9,8 +9,5 @@ namespace ReyesAR.DTO
         public string contrasena { get; set; }
         public bool? estado { get; set; }
         public string claveEmpleado { get; set; }
-
-        // Relación 1:1
-        public EmpleadoEntity Empleado { get; set; }
     }
 }

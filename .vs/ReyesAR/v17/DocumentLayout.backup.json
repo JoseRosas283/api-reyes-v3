@@ -3,8 +3,184 @@
   "WorkspaceRootPath": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\implementations\\pedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\implementations\\pedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\implementations\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\implementations\\pedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\dto\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:dto\\pedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\models\\pedidoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:models\\pedidoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\interface\\ipedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\interface\\ipedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\models\\usuarioentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:models\\usuarioentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\basededatos\\reyesarcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:basededatos\\reyesarcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\dto\\detallepedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:dto\\detallepedidodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\controllers\\detallepedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:controllers\\detallepedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\implementations\\detallepedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\implementations\\detallepedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\controllers\\entregacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:controllers\\entregacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\interface\\ientregaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\interface\\ientregaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\implementations\\entregaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\implementations\\entregaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\implementations\\entregarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\implementations\\entregarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\implementations\\empleadorolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\implementations\\empleadorolrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\interface\\ientregarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\interface\\ientregarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\interface\\idetallepedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\interface\\idetallepedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\models\\entregaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:models\\entregaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\dto\\entregadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:dto\\entregadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\models\\representanteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:models\\representanteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\dto\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:dto\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\models\\proveedorentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:models\\proveedorentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\dto\\empleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:dto\\empleadodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\interface\\irepresentanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\interface\\irepresentanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\controllers\\representantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:controllers\\representantecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\implementations\\representanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\implementations\\representanteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\implementations\\representanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\implementations\\representanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\interface\\irepresentanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\interface\\irepresentanterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\models\\productoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:models\\productoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\dto\\representantedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:dto\\representantedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\interface\\idetallepedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\interface\\idetallepedidoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\implementations\\detallepedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\implementations\\detallepedidorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\implementations\\departamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\implementations\\departamentorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\models\\detallepedidoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:models\\detallepedidoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\repositories\\implementations\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:repositories\\implementations\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\implementations\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:service\\implementations\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\controllers\\unidadventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:controllers\\unidadventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\controllers\\empleadorolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:controllers\\empleadorolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\dto\\empleadoroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:dto\\empleadoroldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\models\\empleadorolentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:models\\empleadorolentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\dto\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:dto\\roldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|solutionrelative:controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F02232F3-0DB2-DDB1-36EC-85D21739A576}|ReyesAR.csproj|c:\\users\\josea\\documents\\8_octavo cuatrimestre\\proyecto integrador\\proyecto-reyes-v3\\api-en-obra-master\\service\\implementations\\equivalenciaunidadservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,24 +202,563 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PedidoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\PedidoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\PedidoRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\PedidoRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\PedidoRepository.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T04:52:59.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PedidoService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\PedidoService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementations\\PedidoService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\PedidoService.cs",
+              "RelativeToolTip": "Service\\Implementations\\PedidoService.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswEwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T04:48:54.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPedidoService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IPedidoService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IPedidoService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IPedidoService.cs",
+              "RelativeToolTip": "Service\\Interface\\IPedidoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T04:48:21.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PedidoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\PedidoDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\PedidoDTO.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\PedidoDTO.cs",
+              "RelativeToolTip": "DTO\\PedidoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T04:17:39.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "Controllers\\PedidoController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwDEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T19:34:00.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EntregaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\EntregaDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\EntregaDTO.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\EntregaDTO.cs",
+              "RelativeToolTip": "DTO\\EntregaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T19:06:52.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EntregaEntity.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\EntregaEntity.cs",
+              "RelativeDocumentMoniker": "Models\\EntregaEntity.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\EntregaEntity.cs",
+              "RelativeToolTip": "Models\\EntregaEntity.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T19:06:09.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProveedorEntity.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\ProveedorEntity.cs",
+              "RelativeDocumentMoniker": "Models\\ProveedorEntity.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\ProveedorEntity.cs",
+              "RelativeToolTip": "Models\\ProveedorEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:46:58.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EmpleadoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\EmpleadoDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\EmpleadoDTO.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\EmpleadoDTO.cs",
+              "RelativeToolTip": "DTO\\EmpleadoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T16:19:35.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PedidoEntity.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\PedidoEntity.cs",
+              "RelativeDocumentMoniker": "Models\\PedidoEntity.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\PedidoEntity.cs",
+              "RelativeToolTip": "Models\\PedidoEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:53:00.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADQAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwDMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-30T21:23:30.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
+              "Title": "DetallePedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\DetallePedidoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DetallePedidoController.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\DetallePedidoController.cs",
+              "RelativeToolTip": "Controllers\\DetallePedidoController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwF0AAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:04:39.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DetallePedidoService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\DetallePedidoService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementations\\DetallePedidoService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\DetallePedidoService.cs",
+              "RelativeToolTip": "Service\\Implementations\\DetallePedidoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:50:45.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DetallePedidoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\DetallePedidoDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DetallePedidoDTO.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\DetallePedidoDTO.cs",
+              "RelativeToolTip": "DTO\\DetallePedidoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:44:36.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReyesARContext.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\BasedeDatos\\ReyesARContext.cs",
+              "RelativeDocumentMoniker": "BasedeDatos\\ReyesARContext.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\BasedeDatos\\ReyesARContext.cs",
+              "RelativeToolTip": "BasedeDatos\\ReyesARContext.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAArwO0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:48:27.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioEntity.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\UsuarioEntity.cs",
+              "RelativeDocumentMoniker": "Models\\UsuarioEntity.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\UsuarioEntity.cs",
+              "RelativeToolTip": "Models\\UsuarioEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:05:30.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IEntregaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Interface\\IEntregaRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interface\\IEntregaRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Interface\\IEntregaRepository.cs",
+              "RelativeToolTip": "Repositories\\Interface\\IEntregaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:19:31.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EntregaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\EntregaRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\EntregaRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\EntregaRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\EntregaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:19:43.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IEntregaService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IEntregaService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IEntregaService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IEntregaService.cs",
+              "RelativeToolTip": "Service\\Interface\\IEntregaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:20:24.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EntregaService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\EntregaService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementations\\EntregaService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\EntregaService.cs",
+              "RelativeToolTip": "Service\\Implementations\\EntregaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:20:36.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EntregaController.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\EntregaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EntregaController.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\EntregaController.cs",
+              "RelativeToolTip": "Controllers\\EntregaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:22:26.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmpleadoRolRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\EmpleadoRolRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\EmpleadoRolRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\EmpleadoRolRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\EmpleadoRolRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:26:01.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IRepresentanteService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IRepresentanteService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IRepresentanteService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IRepresentanteService.cs",
+              "RelativeToolTip": "Service\\Interface\\IRepresentanteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:57:59.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IDetallePedidoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Interface\\IDetallePedidoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interface\\IDetallePedidoRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Interface\\IDetallePedidoRepository.cs",
+              "RelativeToolTip": "Repositories\\Interface\\IDetallePedidoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:47:52.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RepresentanteController.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\RepresentanteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RepresentanteController.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\RepresentanteController.cs",
+              "RelativeToolTip": "Controllers\\RepresentanteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T19:01:54.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RepresentanteService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\RepresentanteService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementations\\RepresentanteService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\RepresentanteService.cs",
+              "RelativeToolTip": "Service\\Implementations\\RepresentanteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:58:12.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\UsuarioDTO.cs",
+              "RelativeToolTip": "DTO\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:05:16.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RepresentanteEntity.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\RepresentanteEntity.cs",
+              "RelativeDocumentMoniker": "Models\\RepresentanteEntity.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\RepresentanteEntity.cs",
+              "RelativeToolTip": "Models\\RepresentanteEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:34:27.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RepresentanteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\RepresentanteRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\RepresentanteRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\RepresentanteRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\RepresentanteRepository.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:57:14.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IRepresentanteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Interface\\IRepresentanteRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interface\\IRepresentanteRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Interface\\IRepresentanteRepository.cs",
+              "RelativeToolTip": "Repositories\\Interface\\IRepresentanteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:56:57.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RepresentanteDTO.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\RepresentanteDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\RepresentanteDTO.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\RepresentanteDTO.cs",
+              "RelativeToolTip": "DTO\\RepresentanteDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:40:10.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DepartamentoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\DepartamentoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\DepartamentoRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\DepartamentoRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\DepartamentoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:14:11.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProductoEntity.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\ProductoEntity.cs",
+              "RelativeDocumentMoniker": "Models\\ProductoEntity.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\ProductoEntity.cs",
+              "RelativeToolTip": "Models\\ProductoEntity.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:51:33.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IDetallePedidoService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IDetallePedidoService.cs",
+              "RelativeDocumentMoniker": "Service\\Interface\\IDetallePedidoService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IDetallePedidoService.cs",
+              "RelativeToolTip": "Service\\Interface\\IDetallePedidoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:50:32.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DetallePedidoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\DetallePedidoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\DetallePedidoRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\DetallePedidoRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\DetallePedidoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:48:14.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DetallePedidoEntity.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\DetallePedidoEntity.cs",
+              "RelativeDocumentMoniker": "Models\\DetallePedidoEntity.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\DetallePedidoEntity.cs",
+              "RelativeToolTip": "Models\\DetallePedidoEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:44:22.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementations\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\UsuarioService.cs",
+              "RelativeToolTip": "Service\\Implementations\\UsuarioService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAowEkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:30:41.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Repositories\\Implementations\\UsuarioRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\UsuarioRepository.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAowEMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:23:34.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UnidadVentaController.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\UnidadVentaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UnidadVentaController.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\UnidadVentaController.cs",
+              "RelativeToolTip": "Controllers\\UnidadVentaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:23:14.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "EmpleadoRolController.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\EmpleadoRolController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmpleadoRolController.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\EmpleadoRolController.cs",
+              "RelativeToolTip": "Controllers\\EmpleadoRolController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAgwFYAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:13:49.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAkwFgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T17:12:48.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "EmpleadoRolEntity.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\EmpleadoRolEntity.cs",
+              "RelativeDocumentMoniker": "Models\\EmpleadoRolEntity.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Models\\EmpleadoRolEntity.cs",
+              "RelativeToolTip": "Models\\EmpleadoRolEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T16:43:44.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "EmpleadoRolDTO.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\EmpleadoRolDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\EmpleadoRolDTO.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\EmpleadoRolDTO.cs",
+              "RelativeToolTip": "DTO\\EmpleadoRolDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T16:17:08.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "RolController.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\RolController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RolController.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\RolController.cs",
+              "RelativeToolTip": "Controllers\\RolController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwEoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T16:33:15.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "RolDTO.cs",
+              "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\RolDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\RolDTO.cs",
+              "ToolTip": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\DTO\\RolDTO.cs",
+              "RelativeToolTip": "DTO\\RolDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T16:22:51.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
               "Title": "EquivalenciaUnidadController.cs",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Controllers\\EquivalenciaUnidadController.cs",
               "RelativeDocumentMoniker": "Controllers\\EquivalenciaUnidadController.cs",
@@ -51,12 +766,11 @@
               "RelativeToolTip": "Controllers\\EquivalenciaUnidadController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAYwCMAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T21:21:04.697Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T21:21:04.697Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 45,
               "Title": "EquivalenciaUnidadService.cs",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Implementations\\EquivalenciaUnidadService.cs",
               "RelativeDocumentMoniker": "Service\\Implementations\\EquivalenciaUnidadService.cs",
@@ -64,12 +778,11 @@
               "RelativeToolTip": "Service\\Implementations\\EquivalenciaUnidadService.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAIwBUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T21:18:32.915Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T21:18:32.915Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 47,
               "Title": "IEquivalenciaUnidadService.cs",
               "DocumentMoniker": "C:\\Users\\josea\\Documents\\8_OCTAVO CUATRIMESTRE\\Proyecto Integrador\\proyecto-reyes-v3\\API-EN-OBRA-master\\Service\\Interface\\IEquivalenciaUnidadService.cs",
               "RelativeDocumentMoniker": "Service\\Interface\\IEquivalenciaUnidadService.cs",
@@ -77,8 +790,7 @@
               "RelativeToolTip": "Service\\Interface\\IEquivalenciaUnidadService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T21:18:02.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T21:18:02.627Z"
             }
           ]
         }

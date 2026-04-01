@@ -2,6 +2,7 @@
 {
     public class PedidoDTO
     {
+        public string? clavePedido { get; set; }
         public DateTime fecha_pedido { get; set; }
         public string estado { get; set; }
         public string observaciones { get; set; }
