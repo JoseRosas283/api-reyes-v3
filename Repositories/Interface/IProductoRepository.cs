@@ -21,7 +21,5 @@ namespace ReyesAR.Repositories.Interface
 
         // Eliminación (Normalmente lógica cambiando el estado)
         Task DeleteAsync(string clave);
-
-
     }
 }

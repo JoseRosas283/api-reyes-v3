@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ReyesAR.BasedeDatos;
@@ -11,9 +12,11 @@ using ReyesAR.BasedeDatos;
 namespace ReyesAR.Migrations
 {
     [DbContext(typeof(ReyesARContext))]
-    partial class ReyesARContextModelSnapshot : ModelSnapshot
+    [Migration("20260401173244_Compras")]
+    partial class Compras
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,52 +24,6 @@ namespace ReyesAR.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("DetalleEntregaEntity", b =>
-                {
-                    b.Property<string>("claveEntrega")
-                        .HasColumnType("varchar(18)");
-
-                    b.Property<string>("claveProducto")
-                        .HasColumnType("varchar(18)");
-
-                    b.Property<string>("tipo_detalle")
-                        .HasColumnType("varchar(20)");
-
-                    b.Property<bool>("extra")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("boolean")
-                        .HasDefaultValue(false);
-
-                    b.Property<decimal>("cantidad")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("claveCompra")
-                        .IsRequired()
-                        .HasColumnType("varchar(18)");
-
-                    b.Property<string>("claveUnidadCompra")
-                        .IsRequired()
-                        .HasColumnType("varchar(18)");
-
-                    b.Property<string>("observaciones")
-                        .HasColumnType("varchar(150)");
-
-                    b.Property<decimal>("precioUnitario")
-                        .HasColumnType("numeric(10,2)");
-
-                    b.Property<decimal>("subtotal")
-                        .HasColumnType("numeric(12,2)");
-
-                    b.HasKey("claveEntrega", "claveProducto", "tipo_detalle", "extra")
-                        .HasName("PK_DetalleEntrega");
-
-                    b.HasIndex("claveCompra");
-
-                    b.HasIndex("claveProducto", "claveUnidadCompra");
-
-                    b.ToTable("DetalleEntrega", (string)null);
-                });
 
             modelBuilder.Entity("EmpresaEntity", b =>
                 {
@@ -246,6 +203,9 @@ namespace ReyesAR.Migrations
                         .HasColumnType("varchar(18)")
                         .HasColumnName("ClaveUsuario");
 
+                    b.Property<string>("UsuarioEntityclaveUsuario")
+                        .HasColumnType("varchar(18)");
+
                     b.Property<DateTime>("fecha_compra")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp")
@@ -269,6 +229,8 @@ namespace ReyesAR.Migrations
                         .HasName("PK_ClaveCompra");
 
                     b.HasIndex("ClaveUsuario");
+
+                    b.HasIndex("UsuarioEntityclaveUsuario");
 
                     b.ToTable("Compras", (string)null);
                 });
@@ -875,44 +837,6 @@ namespace ReyesAR.Migrations
                     b.ToTable("Usuarios", (string)null);
                 });
 
-            modelBuilder.Entity("DetalleEntregaEntity", b =>
-                {
-                    b.HasOne("ReyesAR.Models.CompraPedidoEntity", "CompraPedido")
-                        .WithMany("DetalleEntregaProducto")
-                        .HasForeignKey("claveCompra")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_detalle_entrega_compra");
-
-                    b.HasOne("EntregaEntity", "Entrega")
-                        .WithMany("DetalleEntregaProducto")
-                        .HasForeignKey("claveEntrega")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_detalle_entrega_padre");
-
-                    b.HasOne("ReyesAR.Models.ProductoEntity", "Producto")
-                        .WithMany("DetalleEntregaProducto")
-                        .HasForeignKey("claveProducto")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ReyesAR.Models.EquivalenciaUnidadEntity", "EquivalenciaUnidad")
-                        .WithMany("DetalleEntregaProducto")
-                        .HasForeignKey("claveProducto", "claveUnidadCompra")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_entrega_unidad_equivalencia");
-
-                    b.Navigation("CompraPedido");
-
-                    b.Navigation("Entrega");
-
-                    b.Navigation("EquivalenciaUnidad");
-
-                    b.Navigation("Producto");
-                });
-
             modelBuilder.Entity("EmpresaEntity", b =>
                 {
                     b.HasOne("ReyesAR.Models.ProveedorEntity", "Proveedor")
@@ -995,9 +919,13 @@ namespace ReyesAR.Migrations
             modelBuilder.Entity("ReyesAR.Models.CompraEntity", b =>
                 {
                     b.HasOne("ReyesAR.Models.UsuarioEntity", "Usuario")
-                        .WithMany("Compras")
+                        .WithMany()
                         .HasForeignKey("ClaveUsuario")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("ReyesAR.Models.UsuarioEntity", null)
+                        .WithMany("Compras")
+                        .HasForeignKey("UsuarioEntityclaveUsuario");
 
                     b.Navigation("Usuario");
                 });
@@ -1173,11 +1101,6 @@ namespace ReyesAR.Migrations
                     b.Navigation("Empleado");
                 });
 
-            modelBuilder.Entity("EntregaEntity", b =>
-                {
-                    b.Navigation("DetalleEntregaProducto");
-                });
-
             modelBuilder.Entity("ReyesAR.Models.CategoriaEntity", b =>
                 {
                     b.Navigation("Productos");
@@ -1188,11 +1111,6 @@ namespace ReyesAR.Migrations
                     b.Navigation("CompraDirecta");
 
                     b.Navigation("CompraPedido");
-                });
-
-            modelBuilder.Entity("ReyesAR.Models.CompraPedidoEntity", b =>
-                {
-                    b.Navigation("DetalleEntregaProducto");
                 });
 
             modelBuilder.Entity("ReyesAR.Models.DepartamentoEntity", b =>
@@ -1208,11 +1126,6 @@ namespace ReyesAR.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ReyesAR.Models.EquivalenciaUnidadEntity", b =>
-                {
-                    b.Navigation("DetalleEntregaProducto");
-                });
-
             modelBuilder.Entity("ReyesAR.Models.PedidoEntity", b =>
                 {
                     b.Navigation("Detalles");
@@ -1222,8 +1135,6 @@ namespace ReyesAR.Migrations
 
             modelBuilder.Entity("ReyesAR.Models.ProductoEntity", b =>
                 {
-                    b.Navigation("DetalleEntregaProducto");
-
                     b.Navigation("Detalles");
 
                     b.Navigation("EquivalenciaProductoVenta");

@@ -13,5 +13,6 @@
 
         public virtual ICollection<PedidoEntity> Pedidos { get; set; } = new List<PedidoEntity>();
         public virtual ICollection<EntregaEntity> Entregas { get; set; } = new List<EntregaEntity>();
+        public virtual ICollection<CompraEntity> Compras { get; set; } = new List<CompraEntity>();
     }
 }

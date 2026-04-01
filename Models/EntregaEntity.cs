@@ -20,4 +20,5 @@ public class EntregaEntity
     public virtual UsuarioEntity Usuario { get; set; }
     public virtual ProveedorEntity Proveedor { get; set; }
     public virtual RepresentanteEntity? Representante { get; set; }
+    public virtual ICollection<DetalleEntregaEntity> DetalleEntregaProducto { get; set; } = new List<DetalleEntregaEntity>();
 }

@@ -24,6 +24,7 @@ namespace ReyesAR.BasedeDatos
         public virtual DbSet<DetallePedidoEntity> DetallePedido { get; set; }
         public virtual DbSet<RepresentanteEntity> Representantes { get; set; }
         public virtual DbSet<EntregaEntity> Entregas { get; set; }
+        public virtual DbSet<CompraEntity> Compras { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -777,6 +778,142 @@ namespace ReyesAR.BasedeDatos
                       .HasConstraintName("FK_Entregas_Representantes")
                       .OnDelete(DeleteBehavior.SetNull);
             });
+
+            // 1. Entidad Padre: Compras
+            modelBuilder.Entity<CompraEntity>(entity =>
+            {
+                entity.ToTable("Compras");
+                entity.HasKey(c => c.ClaveCompra).HasName("PK_ClaveCompra");
+                entity.Property(c => c.ClaveCompra).HasColumnType("varchar(18)").HasColumnName("ClaveCompra");
+                entity.Property(c => c.fecha_compra).HasColumnType("timestamp").HasColumnName("fecha_compra").HasDefaultValueSql("CURRENT_TIMESTAMP");
+                entity.Property(c => c.tipo_compra).HasColumnType("varchar(20)").HasColumnName("tipo_compra").IsRequired();
+                entity.Property(c => c.total).HasColumnType("numeric(10,2)").HasColumnName("total").IsRequired();
+                entity.Property(c => c.forma_pago).HasColumnType("varchar(10)").HasColumnName("forma_pago");
+                entity.Property(c => c.ClaveUsuario)
+                        .HasColumnType("varchar(18)")
+                        .HasColumnName("ClaveUsuario");
+                entity.HasOne(c => c.Usuario)
+                        .WithMany(u => u.Compras)
+                        .HasForeignKey(c => c.ClaveUsuario)
+                        .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // 2. Subentidad: CompraPedido
+            modelBuilder.Entity<CompraPedidoEntity>(entity =>
+            {
+                entity.ToTable("Comprapedido");
+                entity.HasKey(cp => cp.claveCompra).HasName("PK_CompraPedido");
+                entity.Property(cp => cp.claveCompra).HasColumnType("varchar(18)").HasColumnName("claveCompra");
+                entity.Property(cp => cp.folio).HasColumnType("varchar(18)").HasColumnName("folio");
+                entity.Property(cp => cp.factura_proveedor).HasColumnType("varchar").HasColumnName("factura_proveedor");
+                entity.Property(cp => cp.claveEntrega).HasColumnType("varchar(18)").HasColumnName("claveEntrega").IsRequired();
+                entity.Property(cp => cp.estado_cumplimiento).HasColumnType("varchar(20)").HasColumnName("estado_cumplimiento").IsRequired();
+                entity.Property(cp => cp.estado_operativo).HasColumnType("varchar(20)").HasColumnName("estado_operativo").IsRequired();
+                entity.HasOne(cp => cp.Compra)
+                        .WithOne(c => c.CompraPedido)
+                        .HasForeignKey<CompraPedidoEntity>(cp => cp.claveCompra)
+                        .OnDelete(DeleteBehavior.Cascade);
+                entity.HasOne(cp => cp.Entrega)
+                        .WithMany()
+                        .HasForeignKey(cp => cp.claveEntrega)
+                        .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // 3. Subentidad: CompraDirecta
+            modelBuilder.Entity<CompraDirectaEntity>(entity =>
+            {
+                entity.ToTable("Compradirecta");
+                entity.HasKey(cd => cd.claveCompra).HasName("PK_CompraDirecta");
+                entity.Property(cd => cd.claveCompra).HasColumnType("varchar(18)").HasColumnName("claveCompra");
+                entity.Property(cd => cd.referencia_pago).HasColumnType("varchar(20)").HasColumnName("referencia_pago");
+                entity.Property(cd => cd.documento_referencia).HasColumnType("varchar").HasColumnName("documento_referencia");
+                entity.Property(cd => cd.origen).HasColumnType("varchar(20)").HasColumnName("origen").IsRequired();
+                entity.Property(cd => cd.estado).HasColumnType("varchar(20)").HasColumnName("estado").IsRequired();
+                entity.HasOne(cd => cd.Compra)
+                        .WithOne(c => c.CompraDirecta)
+                        .HasForeignKey<CompraDirectaEntity>(cd => cd.claveCompra)
+                        .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            modelBuilder.Entity<DetalleEntregaEntity>(entity =>
+            {
+                // Nombre de la tabla
+                entity.ToTable("DetalleEntrega");
+
+                // Llave Primaria Compuesta con Nombre Personalizado
+                entity.HasKey(e => new { e.claveEntrega, e.claveProducto, e.tipo_detalle, e.extra })
+                      .HasName("PK_DetalleEntrega");
+
+                // Configuración de Propiedades (Columnas)
+                entity.Property(e => e.claveEntrega)
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(e => e.claveProducto)
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(e => e.claveCompra)
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(e => e.claveUnidadCompra)
+                    .HasColumnType("varchar(18)")
+                    .IsRequired();
+
+                entity.Property(e => e.cantidad)
+                    .HasColumnType("numeric")
+                    .IsRequired();
+
+                entity.Property(e => e.precioUnitario)
+                    .HasColumnType("numeric(10,2)")
+                    .IsRequired();
+
+                entity.Property(e => e.subtotal)
+                    .HasColumnType("numeric(12,2)")
+                    .IsRequired();
+
+                entity.Property(e => e.observaciones)
+                    .HasColumnType("varchar(150)");
+
+                entity.Property(e => e.tipo_detalle)
+                    .HasColumnType("varchar(20)")
+                    .IsRequired();
+
+                entity.Property(e => e.extra)
+                    .HasColumnType("boolean")
+                    .HasDefaultValue(false)
+                    .IsRequired();
+
+                // ==========================================
+                // RELACIONES (LLAVES FORÁNEAS)
+                // ==========================================
+
+                // Relación con Entregas
+                entity.HasOne(d => d.Entrega)
+                    .WithMany(e => e.DetalleEntregaProducto)
+                    .HasForeignKey(d => d.claveEntrega)
+                    .HasConstraintName("fk_detalle_entrega_padre");
+
+                // Relación con CompraPedido
+                entity.HasOne(d => d.CompraPedido)
+                    .WithMany(c => c.DetalleEntregaProducto)
+                    .HasForeignKey(d => d.claveCompra)
+                    .HasConstraintName("fk_detalle_entrega_compra");
+
+                // Candado Producto-Unidad (EquivalenciasUnidad)
+                entity.HasOne(d => d.EquivalenciaUnidad)
+                    .WithMany(e => e.DetalleEntregaProducto) // No requiere colección en Equivalencia
+                    .HasForeignKey(d => new { d.claveProducto, d.claveUnidadCompra })
+                    .HasConstraintName("fk_entrega_unidad_equivalencia");
+            });
+
+            // Relación con Producto (Unidireccional desde Producto)
+            modelBuilder.Entity<ProductoEntity>()
+                .HasMany(p => p.DetalleEntregaProducto)
+                .WithOne(d => d.Producto)
+                .HasForeignKey(d => d.claveProducto);
+
         }
     }
 }

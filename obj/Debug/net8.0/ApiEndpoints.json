@@ -79,6 +79,160 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CompraController",
+    "Method": "GetAll",
+    "RelativePath": "api/Compra",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompraController",
+    "Method": "Create",
+    "RelativePath": "api/Compra",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ClaveCompra",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipo_compra",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "total",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "forma_pago",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ClaveUsuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "folio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "claveEntrega",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado_cumplimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado_operativo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "facturaImagen",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "facturaImagenUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "referencia_pago",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "origen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "estado_directa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "documentoImagen",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "documentoImagenUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompraController",
+    "Method": "GetById",
+    "RelativePath": "api/Compra/{claveCompra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompraController",
+    "Method": "Cancelar",
+    "RelativePath": "api/Compra/{claveCompra}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CompraController",
+    "Method": "UpdateEstado",
+    "RelativePath": "api/Compra/{claveCompra}/estado",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "nuevoEstado",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ReyesAR.Controllers.DepartamentoController",
     "Method": "GetAll",
     "RelativePath": "api/Departamento",

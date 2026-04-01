@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ReyesAR.BasedeDatos;
@@ -11,9 +12,11 @@ using ReyesAR.BasedeDatos;
 namespace ReyesAR.Migrations
 {
     [DbContext(typeof(ReyesARContext))]
-    partial class ReyesARContextModelSnapshot : ModelSnapshot
+    [Migration("20260401202104_DetalleEntregaColumna")]
+    partial class DetalleEntregaColumna
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

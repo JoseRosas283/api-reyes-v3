@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ReyesAR.BasedeDatos;
@@ -11,9 +12,11 @@ using ReyesAR.BasedeDatos;
 namespace ReyesAR.Migrations
 {
     [DbContext(typeof(ReyesARContext))]
-    partial class ReyesARContextModelSnapshot : ModelSnapshot
+    [Migration("20260401201316_DetalleEntrega")]
+    partial class DetalleEntrega
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,6 +40,12 @@ namespace ReyesAR.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("boolean")
                         .HasDefaultValue(false);
+
+                    b.Property<string>("EquivalenciaUnidadEntityclaveProducto")
+                        .HasColumnType("varchar(18)");
+
+                    b.Property<string>("EquivalenciaUnidadEntityclaveUnidadCompra")
+                        .HasColumnType("varchar(18)");
 
                     b.Property<decimal>("cantidad")
                         .HasColumnType("numeric");
@@ -62,6 +71,8 @@ namespace ReyesAR.Migrations
                         .HasName("PK_DetalleEntrega");
 
                     b.HasIndex("claveCompra");
+
+                    b.HasIndex("EquivalenciaUnidadEntityclaveProducto", "EquivalenciaUnidadEntityclaveUnidadCompra");
 
                     b.HasIndex("claveProducto", "claveUnidadCompra");
 
@@ -891,14 +902,18 @@ namespace ReyesAR.Migrations
                         .IsRequired()
                         .HasConstraintName("fk_detalle_entrega_padre");
 
-                    b.HasOne("ReyesAR.Models.ProductoEntity", "Producto")
+                    b.HasOne("ReyesAR.Models.ProductoEntity", null)
                         .WithMany("DetalleEntregaProducto")
                         .HasForeignKey("claveProducto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ReyesAR.Models.EquivalenciaUnidadEntity", "EquivalenciaUnidad")
+                    b.HasOne("ReyesAR.Models.EquivalenciaUnidadEntity", null)
                         .WithMany("DetalleEntregaProducto")
+                        .HasForeignKey("EquivalenciaUnidadEntityclaveProducto", "EquivalenciaUnidadEntityclaveUnidadCompra");
+
+                    b.HasOne("ReyesAR.Models.EquivalenciaUnidadEntity", "EquivalenciaUnidad")
+                        .WithMany()
                         .HasForeignKey("claveProducto", "claveUnidadCompra")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
@@ -909,8 +924,6 @@ namespace ReyesAR.Migrations
                     b.Navigation("Entrega");
 
                     b.Navigation("EquivalenciaUnidad");
-
-                    b.Navigation("Producto");
                 });
 
             modelBuilder.Entity("EmpresaEntity", b =>
