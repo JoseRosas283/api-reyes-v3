@@ -12,6 +12,7 @@
         public virtual CompraPedidoEntity? CompraPedido { get; set; }
         public virtual CompraDirectaEntity? CompraDirecta { get; set; }
         public virtual UsuarioEntity Usuario { get; set; }
+        public virtual ICollection<EntradaEntity> Entradas { get; set; } = new List<EntradaEntity>();
     }
 
     // Subentidad: Comprapedido (Especialización)
@@ -41,5 +42,7 @@
 
         // Mismo estilo que Proveedor: La subentidad referencia al padre
         public virtual CompraEntity? Compra { get; set; }
+        public virtual ICollection<DetalleCompraDirectaEntity> DetalleCompraDirectaProducto { get; set; } = new List<DetalleCompraDirectaEntity>();
+
     }
 }

@@ -43,11 +43,11 @@ public class RepresentanteController : ControllerBase
         try
         {
             var resultado = await _service.CreateRepresentanteAsync(representanteDto);
-
-            return CreatedAtAction(
+            return Ok(resultado);  // cambie a esto para agregar
+            /* return CreatedAtAction(
                 nameof(GetById),
                 new { claveRepresentante = resultado.claveRepresentante },
-                resultado);
+                resultado); */
         }
         catch (ArgumentException ex)
         {

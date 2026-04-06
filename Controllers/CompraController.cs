@@ -59,7 +59,8 @@ public class CompraController : ControllerBase
             var nuevaCompra = await _service.CreateAsync(compraDto);
 
             // Retornamos 201 Created con el objeto que ya trae la Clave generada por el SP
-            return CreatedAtAction(nameof(GetById), new { claveCompra = nuevaCompra.ClaveCompra }, nuevaCompra);
+            return Ok(nuevaCompra);
+            // return CreatedAtAction(nameof(GetById), new { claveCompra = nuevaCompra.ClaveCompra }, nuevaCompra);
         }
         catch (ArgumentException ex)
         {

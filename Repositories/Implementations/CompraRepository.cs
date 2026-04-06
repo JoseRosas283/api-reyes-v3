@@ -119,6 +119,7 @@ public class CompraRepository : ICompraRepository
 
         return new CompraDTO
         {
+            ClaveCompra = e.ClaveCompra,
             // Campos Tabla Padre
             tipo_compra = e.tipo_compra,
             total = e.total,

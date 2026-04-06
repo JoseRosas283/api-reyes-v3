@@ -13,5 +13,6 @@
         public virtual ProductoEntity Producto { get; set; }
         public virtual UnidadCompraEntity UnidadCompra { get; set; }
         public virtual ICollection<DetalleEntregaEntity> DetalleEntregaProducto { get; set; } = new List<DetalleEntregaEntity>();
+        public virtual ICollection<DetalleCompraDirectaEntity> DetalleCompraDirectaProducto { get; set; } = new List<DetalleCompraDirectaEntity>();
     }
 }

@@ -15,7 +15,7 @@ public class RepresentanteRepository : IRepresentanteRepository
     public async Task<IEnumerable<RepresentanteEntity>> GetAllAsync()
     {
         return await _context.Set<RepresentanteEntity>()
-            .Include(r => r.Proveedor) // Carga Eager para ver a qué empresa pertenecen
+            // .Include(r => r.Proveedor) // Carga Eager para ver a qué empresa pertenecen
             .AsNoTracking()
             .ToListAsync();
     }
@@ -23,7 +23,7 @@ public class RepresentanteRepository : IRepresentanteRepository
     public async Task<RepresentanteEntity?> GetByIdAsync(string claveRepresentante)
     {
         return await _context.Set<RepresentanteEntity>()
-            .Include(r => r.Proveedor)
+            // .Include(r => r.Proveedor)
             .FirstOrDefaultAsync(r => r.claveRepresentante == claveRepresentante);
     }
 

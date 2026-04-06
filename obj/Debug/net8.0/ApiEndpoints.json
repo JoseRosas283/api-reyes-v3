@@ -312,6 +312,336 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DetalleCompraDirectaController",
+    "Method": "GetAll",
+    "RelativePath": "api/DetalleCompraDirecta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ReyesAR.Models.DetalleCompraDirectaEntity, ReyesAR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DetalleCompraDirectaController",
+    "Method": "Create",
+    "RelativePath": "api/DetalleCompraDirecta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.DetalleCompraDirectaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ReyesAR.Models.DetalleCompraDirectaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DetalleCompraDirectaController",
+    "Method": "GetById",
+    "RelativePath": "api/DetalleCompraDirecta/{claveCompra}/{claveProducto}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ReyesAR.Models.DetalleCompraDirectaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DetalleCompraDirectaController",
+    "Method": "Update",
+    "RelativePath": "api/DetalleCompraDirecta/{claveCompra}/{claveProducto}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.DetalleCompraDirectaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DetalleCompraDirectaController",
+    "Method": "Delete",
+    "RelativePath": "api/DetalleCompraDirecta/{claveCompra}/{claveProducto}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DetalleCompraDirectaController",
+    "Method": "GetByCompra",
+    "RelativePath": "api/DetalleCompraDirecta/por-compra/{claveCompra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ReyesAR.Models.DetalleCompraDirectaEntity, ReyesAR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DetalleEntregaController",
+    "Method": "GetAll",
+    "RelativePath": "api/DetalleEntrega",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DetalleEntregaEntity, ReyesAR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DetalleEntregaController",
+    "Method": "Create",
+    "RelativePath": "api/DetalleEntrega",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.DetalleEntregaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DetalleEntregaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DetalleEntregaController",
+    "Method": "GetById",
+    "RelativePath": "api/DetalleEntrega/{claveEntrega}/{claveProducto}/{tipo_detalle}/{extra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrega",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipo_detalle",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "extra",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "DetalleEntregaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "DetalleEntregaController",
+    "Method": "Update",
+    "RelativePath": "api/DetalleEntrega/{claveEntrega}/{claveProducto}/{tipo_detalle}/{extra}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrega",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipo_detalle",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "extra",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.DetalleEntregaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DetalleEntregaController",
+    "Method": "Delete",
+    "RelativePath": "api/DetalleEntrega/{claveEntrega}/{claveProducto}/{tipo_detalle}/{extra}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrega",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipo_detalle",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "extra",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DetalleEntregaController",
+    "Method": "GetByEntrega",
+    "RelativePath": "api/DetalleEntrega/por-entrega/{claveEntrega}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrega",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[DetalleEntregaEntity, ReyesAR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "DetallePedidoController",
     "Method": "GetAll",
     "RelativePath": "api/DetallePedido",
@@ -608,6 +938,120 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EntradaController",
+    "Method": "GetAll",
+    "RelativePath": "api/Entrada",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ReyesAR.Models.EntradaEntity, ReyesAR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EntradaController",
+    "Method": "Create",
+    "RelativePath": "api/Entrada",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ReyesAR.DTO.EntradaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ReyesAR.Models.EntradaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EntradaController",
+    "Method": "GetById",
+    "RelativePath": "api/Entrada/{claveEntrada}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrada",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ReyesAR.Models.EntradaEntity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EntradaController",
+    "Method": "Delete",
+    "RelativePath": "api/Entrada/{claveEntrada}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveEntrada",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EntradaController",
+    "Method": "GetByCompra",
+    "RelativePath": "api/Entrada/compra/{claveCompra}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "claveCompra",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ReyesAR.Models.EntradaEntity, ReyesAR, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "EntregaController",
@@ -920,6 +1364,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "nombre",
         "Type": "System.String",
         "IsRequired": false
@@ -1044,6 +1493,11 @@
         "Name": "claveProducto",
         "Type": "System.String",
         "IsRequired": true
+      },
+      {
+        "Name": "claveProducto",
+        "Type": "System.String",
+        "IsRequired": false
       },
       {
         "Name": "nombre",

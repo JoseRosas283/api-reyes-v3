@@ -12,8 +12,4 @@
     {
         public string EstadoTexto { get; set; }
     }
-
-
-
-
 }

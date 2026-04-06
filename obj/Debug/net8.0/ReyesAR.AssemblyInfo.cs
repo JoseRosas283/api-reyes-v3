@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReyesAR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1ac2bcb4f32b487c908a5b4421c7c29a7977834")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d83fc6e14d9eb7de58f67a9f174edbd40bda9a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReyesAR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReyesAR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -25,6 +25,9 @@ namespace ReyesAR.BasedeDatos
         public virtual DbSet<RepresentanteEntity> Representantes { get; set; }
         public virtual DbSet<EntregaEntity> Entregas { get; set; }
         public virtual DbSet<CompraEntity> Compras { get; set; }
+        public virtual DbSet<DetalleEntregaEntity> DetalleEntrega { get; set; }
+        public virtual DbSet<DetalleCompraDirectaEntity> DetalleCompraDirecta {  get; set; }
+        public virtual DbSet<EntradaEntity> Entradas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -193,10 +196,15 @@ namespace ReyesAR.BasedeDatos
                 entity.ToTable("Proveedores");
                 entity.HasKey(p => p.claveProveedor).HasName("PK_ClaveProveedor");
 
-                entity.Property(p => p.claveProveedor).HasColumnType("varchar(18)");
-                entity.Property(p => p.direccion).HasColumnType("varchar(255)");
-                entity.Property(p => p.telefono).HasColumnType("varchar(15)");
-                entity.Property(p => p.tipo_proveedor).HasColumnType("varchar(20)");
+                entity.Property(p => p.claveProveedor)
+                    .HasColumnName("claveProveedor")   // ← AGREGAR ESTO
+                    .HasColumnType("varchar(18)");
+                entity.Property(p => p.direccion)
+                    .HasColumnType("varchar(255)");
+                entity.Property(p => p.telefono)
+                    .HasColumnType("varchar(15)");
+                entity.Property(p => p.tipo_proveedor)
+                    .HasColumnType("varchar(20)");
 
                 // Campo de fecha con default en la base
                 entity.Property(p => p.FechaCreacion)
@@ -210,7 +218,8 @@ namespace ReyesAR.BasedeDatos
                 entity.ToTable("Empresas");
                 // La clave primaria es también la foránea hacia Proveedor
                 entity.HasKey(e => e.claveProveedor);
-
+                entity.Property(e => e.claveProveedor)
+                    .HasColumnName("claveProveedor");
                 entity.Property(e => e.razonSocial).HasColumnType("varchar(150)").IsRequired();
                 entity.Property(e => e.rfc).HasColumnType("varchar(13)").IsRequired();
 
@@ -225,7 +234,8 @@ namespace ReyesAR.BasedeDatos
             {
                 entity.ToTable("Independientes");
                 entity.HasKey(i => i.claveProveedor);
-
+                entity.Property(e => e.claveProveedor)
+                    .HasColumnName("claveProveedor");
                 entity.Property(i => i.nombre).HasColumnType("varchar(100)").IsRequired();
                 entity.Property(i => i.apellidoPaterno).HasColumnType("varchar(100)");
                 entity.Property(i => i.apellidoMaterno).HasColumnType("varchar(100)");
@@ -243,64 +253,88 @@ namespace ReyesAR.BasedeDatos
                 entity.HasKey(p => p.claveProducto).HasName("PK_ClaveProducto");
 
                 entity.Property(p => p.claveProducto)
+                    .HasColumnName("claveproducto")
                     .HasColumnType("varchar(18)")
                     .HasDefaultValueSql("generar_clave_producto()");
 
                 entity.Property(p => p.nombre)
+                    .HasColumnName("nombre")
                     .HasColumnType("varchar(100)")
                     .IsRequired();
 
                 entity.Property(p => p.descripcion)
+                    .HasColumnName("descripcion")
                     .HasColumnType("varchar(255)")
                     .IsRequired();
 
                 entity.Property(p => p.precio)
+                    .HasColumnName("precio")
                     .HasColumnType("numeric(10,2)")
                     .IsRequired();
 
                 entity.Property(p => p.margen_ganancia)
+                    .HasColumnName("margen_ganancia")
                     .HasColumnType("numeric(5,2)")
                     .HasDefaultValue(1.30m);
 
                 entity.Property(p => p.precio_venta)
+                    .HasColumnName("precio_venta")
                     .HasColumnType("numeric(10,2)");
 
                 entity.Property(p => p.codigo_barras)
+                    .HasColumnName("codigo_barras")
                     .HasColumnType("varchar(13)");
 
                 entity.Property(p => p.tipo_producto)
+                    .HasColumnName("tipo_producto")
                     .HasColumnType("varchar(15)")
                     .IsRequired();
 
                 entity.Property(p => p.cantidad)
+                    .HasColumnName("cantidad")
                     .HasColumnType("decimal(10,2)");
 
                 entity.Property(p => p.caducidad)
+                    .HasColumnName("caducidad")
                     .HasColumnType("boolean");
 
                 entity.Property(p => p.estado)
+                    .HasColumnName("estado")
                     .HasColumnType("boolean")
                     .HasDefaultValue(true);
 
                 entity.Property(p => p.Imagen)
-                   .HasColumnType("varchar");
+                    .HasColumnName("imagen")
+                    .HasColumnType("varchar");
 
+                // FK: Categoría
+                entity.Property(p => p.claveCategoria)
+                    .HasColumnName("clavecategoria");
 
-                entity.HasOne(p => p.Categoria)               // <-- Usamos la propiedad virtual de tu clase
-               .WithMany(c => c.Productos)
-              .HasForeignKey(p => p.claveCategoria);
+                entity.HasOne(p => p.Categoria)
+                    .WithMany(c => c.Productos)
+                    .HasForeignKey(p => p.claveCategoria);
 
-                // 2. Relación con Unidad de Medida
-                entity.HasOne(p => p.UnidadMedida)           // <-- Referencia directa a la propiedad
+                // FK: Unidad de Medida
+                entity.Property(p => p.claveUnidadMedida)
+                    .HasColumnName("claveunidadmedida");
+
+                entity.HasOne(p => p.UnidadMedida)
                     .WithMany(u => u.Productos)
                     .HasForeignKey(p => p.claveUnidadMedida);
 
-                // 3. Relación con Unidad de Venta
+                // FK: Unidad de Venta
+                entity.Property(p => p.claveUnidadVenta)
+                    .HasColumnName("claveunidadventa");
+
                 entity.HasOne(p => p.UnidadVenta)
                     .WithMany(u => u.Productos)
                     .HasForeignKey(p => p.claveUnidadVenta);
 
-                // 4. Relación con Proveedor
+                // FK: Proveedor
+                entity.Property(p => p.claveProveedor)
+                    .HasColumnName("claveproveedor");
+
                 entity.HasOne(p => p.Proveedor)
                     .WithMany(pr => pr.Productos)
                     .HasForeignKey(p => p.claveProveedor);
@@ -914,6 +948,123 @@ namespace ReyesAR.BasedeDatos
                 .WithOne(d => d.Producto)
                 .HasForeignKey(d => d.claveProducto);
 
+            // CONFIGURACIÓN: DetalleCompraDirecta
+            modelBuilder.Entity<DetalleCompraDirectaEntity>(entity =>
+            {
+                entity.ToTable("DetalleCompraDirecta");
+
+                // 1. Definición de la Llave Primaria Compuesta
+                entity.HasKey(e => new { e.claveCompra, e.claveProducto });
+
+                // 2. Mapeo de Columnas y Tipos de Datos
+                entity.Property(e => e.claveCompra)
+                    .HasMaxLength(18)
+                    .IsRequired();
+
+                entity.Property(e => e.claveProducto)
+                    .HasMaxLength(18)
+                    .IsRequired();
+
+                entity.Property(e => e.cantidad)
+                    .HasColumnType("numeric(10,2)")
+                    .IsRequired();
+
+                entity.Property(e => e.precioUnitario)
+                    .HasColumnType("double precision")
+                    .IsRequired();
+
+                entity.Property(e => e.impuestos)
+                    .HasMaxLength(10);
+
+                // 3. Columna Calculada (IMPORTANTE: Se marca como calculada en BD)
+                entity.Property(d => d.subtotal)
+                    .HasColumnType("numeric(10,2)")
+                    .HasComputedColumnSql("\"cantidad\" * \"precioUnitario\"", stored: true)
+                    .ValueGeneratedOnAddOrUpdate(); // Se genera tanto al insertar como al editar
+
+                entity.Property(e => e.claveUnidadCompra)
+                    .HasMaxLength(18)
+                    .IsRequired();
+
+                // 4. Relaciones (Foreign Keys)
+
+                // Relación con CompraDirecta
+                entity.HasOne(d => d.CompraDirecta)
+                    .WithMany() // O .WithMany(p => p.Detalles) si tienes la colección en la cabecera
+                    .HasForeignKey(d => d.claveCompra)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                // Relación con EquivalenciasUnidad (Usa los dos campos de la FK compuesta)
+                entity.HasOne(d => d.EquivalenciaUnidad)
+                    .WithMany()
+                    .HasForeignKey(d => new { d.claveProducto, d.claveUnidadCompra })
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                // Relación lógica con Producto
+                entity.HasOne(d => d.Producto)
+                    .WithMany()
+                    .HasForeignKey(d => d.claveProducto)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<EntradaEntity>(entity =>
+            {
+                // 1. Nombre de la tabla y Llave Primaria
+                entity.ToTable("Entradas");
+                entity.HasKey(e => e.claveEntrada);
+
+                // 2. Configuración de la Clave con Función de Postgres
+                entity.Property(e => e.claveEntrada)
+                    .HasColumnType("varchar(18)")
+                    .HasDefaultValueSql("generar_clave_entrada()")
+                    .ValueGeneratedOnAdd();
+
+                // 3. Mapeo de campos obligatorios y tipos
+                entity.Property(e => e.cantidad_recibida)
+                    .HasColumnType("numeric(10,2)")
+                    .IsRequired();
+
+                entity.Property(e => e.fecha)
+                    .HasColumnType("date")
+                    .IsRequired();
+
+                entity.Property(e => e.tipo_entrada)
+                    .HasMaxLength(18)
+                    .IsRequired();
+
+                entity.Property(e => e.fecha_caducidad)
+                    .HasColumnType("date");
+
+                entity.Property(e => e.observaciones)
+                    .HasMaxLength(150);
+
+                // Campo extra: BOOLEAN DEFAULT NULL
+                entity.Property(e => e.extra)
+                    .HasDefaultValue(null);
+
+                // --- 4. CONFIGURACIÓN DE RELACIONES (COLECCIONES) ---
+
+                // Relación con Compra (Una Compra -> Muchas Entradas)
+                entity.HasOne(d => d.Compra)
+                    .WithMany(p => p.Entradas) // p.Entradas es la ICollection en CompraEntity
+                    .HasForeignKey(d => d.claveCompra)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
+
+                // Relación con Producto (Un Producto -> Muchas Entradas)
+                entity.HasOne(d => d.Producto)
+                    .WithMany(p => p.Entradas) // p.Entradas es la ICollection en ProductoEntity
+                    .HasForeignKey(d => d.claveProducto)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
+
+                // Relación con Usuario (Un Usuario -> Muchas Entradas registradas)
+                entity.HasOne(d => d.Usuario)
+                    .WithMany(p => p.Entradas) // p.Entradas es la ICollection en UsuarioEntity
+                    .HasForeignKey(d => d.claveUsuario)
+                    .OnDelete(DeleteBehavior.Restrict)
+                    .IsRequired();
+            });
         }
     }
 }

@@ -52,6 +52,12 @@ builder.Services.AddScoped<IEntregaRepository, EntregaRepository>();
 builder.Services.AddScoped<IEntregaService, EntregaService>();
 builder.Services.AddScoped<ICompraRepository, CompraRepository>();
 builder.Services.AddScoped<ICompraService, CompraService>();
+builder.Services.AddScoped<IDetalleEntregaRepository, DetalleEntregaRepository>();
+builder.Services.AddScoped<IDetalleEntregaService, DetalleEntregaService>();
+builder.Services.AddScoped<IDetalleCompraDirectaRepository, DetalleCompraDirectaRepository>();
+builder.Services.AddScoped<IDetalleCompraDirectaService, DetalleCompraDirectaService>();
+builder.Services.AddScoped<IEntradaRepository, EntradaRepository>();
+builder.Services.AddScoped<IEntradaService, EntradaService>();
 
 
 builder.Services.AddHttpContextAccessor();

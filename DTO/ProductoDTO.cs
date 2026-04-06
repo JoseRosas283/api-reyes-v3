@@ -2,7 +2,7 @@
 {
     public class ProductoDTO
     {
-
+        public string? claveProducto { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public decimal precio { get; set; }
@@ -16,13 +16,10 @@
         public IFormFile? Imagen { get; set; }
         public string? ImagenUrl { get; set; }
 
-
         // Campos de relaciones (Foreign Keys)
         public string claveCategoria { get; set; }
         public string claveUnidadMedida { get; set; }
         public string claveUnidadVenta { get; set; }
         public string claveProveedor { get; set; }
-
-
     }
 }

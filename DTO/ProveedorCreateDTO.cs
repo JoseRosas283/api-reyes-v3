@@ -41,15 +41,4 @@
         public string ApellidoMaterno { get; set; }
         public string TipoServicio { get; set; }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

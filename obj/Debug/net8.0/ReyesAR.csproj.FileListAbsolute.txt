@@ -267,3 +267,4 @@ C:\Users\josea\Documents\8_OCTAVO CUATRIMESTRE\Proyecto Integrador\proyecto-reye
 C:\Users\josea\Documents\8_OCTAVO CUATRIMESTRE\Proyecto Integrador\proyecto-reyes-v3\API-EN-OBRA-master\obj\Debug\net8.0\ReyesAR.genruntimeconfig.cache
 C:\Users\josea\Documents\8_OCTAVO CUATRIMESTRE\Proyecto Integrador\proyecto-reyes-v3\API-EN-OBRA-master\obj\Debug\net8.0\ref\ReyesAR.dll
 C:\Users\josea\Documents\8_OCTAVO CUATRIMESTRE\Proyecto Integrador\proyecto-reyes-v3\API-EN-OBRA-master\obj\Debug\net8.0\ReyesAR.sourcelink.json
+C:\Users\josea\Documents\8_OCTAVO CUATRIMESTRE\Proyecto Integrador\proyecto-reyes-v3\API-EN-OBRA-master\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
